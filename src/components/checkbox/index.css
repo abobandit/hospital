@@ -1,0 +1,13 @@
+.checkbox {
+    input:checked ~ .checkmark path {
+        stroke-dashoffset: 0;
+    }
+
+    .checkmark svg {
+        path {
+            stroke-dasharray: 30;
+            stroke-dashoffset: 30;
+            transition: all 0.3s ease;
+        }
+    }
+}
