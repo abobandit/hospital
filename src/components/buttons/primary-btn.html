@@ -3,67 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <title>buttons</title>
+    <style>
+        a:has(button){
+            width: min-content;
+        }
+        .disabled-primary > button {
+            background: #80D3D5;
+            color: white;
+        }
+        .disabled-secondary > button {
+            background: #FFEEF2;
+            color: #FE8EA8;
+        }
+        .disabled-secondary small > button {
+            background: #E2F5F6;
+            color: #80D3D5;
+            border: none;
+        }
+        .disabled-white > button {
+            background: rgba(255, 255, 255, .5);
+            color: #80D3D5;
+        }
+        svg{
+             height: 1.2em;
+         }
+
+    </style>
     <link rel="stylesheet" href="./../../../src/styles/style.css">
     <link rel="stylesheet" href="./../../../src/styles/output.css">
 </head>
 <body class="flex flex-col items-center justify-center pt-4">
 <!--Primary-->
-<div class="primary grid grid-cols-3 gap-4 ">
+<div class="primary grid grid-cols-3 gap-4  ">
     <!--large-->
-    <button class="primary-large-button w-[360px] h-[56px] bg-(--green) rounded-[16px] font-[HeliosExt] font-medium text-[15px]  text-white hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#80D3D5] disabled:text-white">
-        <p>
+    <button class="primary-large-button w-[360px] p-[16.75px] bg-(--green) rounded-[16px] font-[HeliosExt] font-medium text-[15px]  text-white hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#80D3D5] disabled:text-white">
+        <span>
             large
-        </p>
+        </span>
     </button>
-    <button disabled class="primary-large-button w-[360px] h-[56px] bg-(--green) rounded-[16px] font-[HeliosExt] font-medium text-[15px]  text-white hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#80D3D5] disabled:text-white">
-        <p>
+    <a class="disabled-primary" href="#">
+        <button class="primary large-button w-[360px]  p-[16.75px] bg-(--green) rounded-[16px] font-[HeliosExt] font-medium text-[15px]  text-white hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#80D3D5] disabled:text-white">
+            <span>
+                large
+            </span>
+        </button>
+    </a>
+
+    <button class="primary large-button load w-[360px]  p-[16.75px] bg-(--green) rounded-[16px] font-[HeliosExt] font-medium text-[15px]  text-white hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#80D3D5] disabled:text-white">
+        <span>
             large
-        </p>
-    </button>
-    <button class="primary-large-button load w-[360px] h-[56px] bg-(--green) rounded-[16px] font-[HeliosExt] font-medium text-[15px]  text-white hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#80D3D5] disabled:text-white">
-        <p>
-            large
-        </p>
+        </span>
     </button>
     <!---->
     <!--normal-->
-    <button class="primary-normal-button w-[280px] h-[44px] bg-(--green) rounded-[16px] font-[HeliosExt] font-medium text-[13px]  text-white hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#80D3D5] disabled:text-white">
-        <p>
+    <button class="primary-normal-button w-[280px] p-[12.25px] bg-(--green) rounded-[16px] font-[HeliosExt] font-medium text-[13px]  text-white hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#80D3D5] disabled:text-white">
+        <span>
             Записаться к врачу
-        </p>
+        </span>
     </button>
-    <button disabled class="primary-normal-button w-[280px] h-[44px] bg-(--green) rounded-[16px] font-[HeliosExt] font-medium text-[13px]  text-white hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#80D3D5] disabled:text-white">
-        <p>
+    <a class="disabled-primary" href="#">
+        <button class="primary normal-button w-[280px] p-[12.25px] bg-(--green) rounded-[16px] font-[HeliosExt] font-medium text-[13px]  text-white hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#80D3D5] disabled:text-white">
+                <span>
+                    Записаться к врачу
+                </span>
+        </button>
+    </a>
+    <button class="primary normal-button load w-[280px] p-[12.25px] bg-(--green) rounded-[16px] font-[HeliosExt] font-medium text-[13px]  text-white hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#80D3D5] disabled:text-white">
+        <span>
             Записаться к врачу
-        </p>
-    </button>
-    <button class="primary-normal-button load w-[280px] h-[44px] bg-(--green) rounded-[16px] font-[HeliosExt] font-medium text-[13px]  text-white hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#80D3D5] disabled:text-white">
-        <p>
-            Записаться к врачу
-        </p>
+        </span>
     </button>
     <!---->
     <!--small-->
-    <button class="primary-small-button w-[140px] h-[40px] bg-(--green) rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-white hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#80D3D5] disabled:text-white">
-        <p>
+    <button class="primary small-button w-[140px] p-[10.25px] bg-(--green) rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-white hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#80D3D5] disabled:text-white">
+        <span>
             запись
-        </p>
+        </span>
     </button>
-    <button disabled class="primary-small-button w-[140px] h-[40px] bg-(--green) rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-white hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#80D3D5] disabled:text-white">
-        <p>
+    <a class="disabled-primary" href="#">
+        <button class="primary small-button w-[140px] p-[10.25px] bg-(--green) rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-white hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#80D3D5] disabled:text-white">
+        <span>
             запись
-        </p>
-    </button>
-    <button class="primary-small-button load  w-[140px] h-[40px] bg-(--green) rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-white hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#80D3D5] disabled:text-white">
-        <p>
+        </span>
+        </button>
+    </a>
+    <button class="primary small-button load  w-[140px] p-[10.25px] bg-(--green) rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-white hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#80D3D5] disabled:text-white">
+        <span>
             запись
-        </p>
+        </span>
     </button>
-    <button class="primary-small-button w-[140px] h-[40px] bg-(--green) rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-white hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#80D3D5] disabled:text-white">
+    <button class="primary small-button w-[140px] p-[10.25px] bg-(--green) rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-white hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#80D3D5] disabled:text-white">
         <div class="flex justify-center gap-[4px] items-center">
-            <p>
+            <span>
                 запись
-            </p>
+            </span>
             <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M13.6665 7.81706L3.6665 7.81706" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                       stroke-linejoin="round"/>
@@ -73,77 +106,86 @@
         </div>
 
     </button>
-    <button disabled class="primary-small-button w-[140px] h-[40px] bg-(--green) rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-white hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#80D3D5] disabled:text-white">
-        <div class="flex justify-center gap-[4px] items-center">
-            <p>
+    <a class="disabled-primary" href="#">
+        <button class="primary small-button w-[140px] p-[10.25px] bg-(--green) rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-white hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#80D3D5] disabled:text-white">
+            <div class="flex justify-center gap-[4px] items-center">
+            <span>
                 запись
-            </p>
-            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M13.6665 7.81706L3.6665 7.81706" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round"/>
-                <path d="M9.6333 3.80083L13.6666 7.81683L9.6333 11.8335" stroke="currentColor" stroke-width="2"
-                      stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </div>
+            </span>
+                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.6665 7.81706L3.6665 7.81706" stroke="currentColor" stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                    <path d="M9.6333 3.80083L13.6666 7.81683L9.6333 11.8335" stroke="currentColor" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
 
-    </button>
+        </button>
+    </a>
 </div>
 <div class="secondary  grid grid-cols-3 gap-4 mt-4">
     <!--large-->
-    <button class="secondary-large-button w-[360px] h-[56px] bg-(--soft-red) rounded-[16px] font-[HeliosExt] font-medium text-[15px]  text-white hover:bg-[#FFEEF2] hover:text-(--soft-red) disabled:bg-[#FFEEF2] disabled:text-[#FE8EA8]">
-        <p>
+    <button class="secondary large-button w-[360px]  p-[16.75px] bg-(--soft-red) rounded-[16px] font-[HeliosExt] font-medium text-[15px]  text-white hover:bg-[#FFEEF2] hover:text-(--soft-red) disabled:bg-[#FFEEF2] disabled:text-[#FE8EA8]">
+        <span>
             large
-        </p>
+        </span>
     </button>
-    <button disabled class="secondary-large-button w-[360px] h-[56px] bg-(--soft-red) rounded-[16px] font-[HeliosExt] font-medium text-[15px]  text-white hover:bg-[#FFEEF2] hover:text-(--soft-red) disabled:bg-[#FFEEF2] disabled:text-[#FE8EA8]">
-        <p>
+    <a class="disabled-secondary" href="#">
+        <button class="secondary large-button w-[360px]  p-[16.75px] bg-(--soft-red) rounded-[16px] font-[HeliosExt] font-medium text-[15px]  text-white hover:bg-[#FFEEF2] hover:text-(--soft-red) disabled:bg-[#FFEEF2] disabled:text-[#FE8EA8]">
+        <span>
             large
-        </p>
-    </button>
-    <button class="secondary-large-button load w-[360px] h-[56px] bg-(--soft-red) rounded-[16px] font-[HeliosExt] font-medium text-[15px]  text-white hover:bg-[#FFEEF2] hover:text-(--soft-red) disabled:bg-[#FFEEF2] disabled:text-[#FE8EA8]">
-        <p>
+        </span>
+        </button>
+    </a>
+    <button class="secondary large-button load w-[360px]  p-[16.75px] bg-(--soft-red) rounded-[16px] font-[HeliosExt] font-medium text-[15px]  text-white hover:bg-[#FFEEF2] hover:text-(--soft-red) disabled:bg-[#FFEEF2] disabled:text-[#FE8EA8]">
+        <span>
             large
-        </p>
+        </span>
     </button>
     <!---->
     <!--normal-->
-    <button class="secondary-normal-button w-[280px] h-[44px] bg-(--soft-red) rounded-[16px] font-[HeliosExt] font-medium text-[13px]  text-white hover:bg-[#FFEEF2] hover:text-(--soft-red) disabled:bg-[#FFEEF2] disabled:text-[#FE8EA8]">
-        <p>
+    <button class="secondary normal-button w-[280px] p-[12.25px] bg-(--soft-red) rounded-[16px] font-[HeliosExt] font-medium text-[13px]  text-white hover:bg-[#FFEEF2] hover:text-(--soft-red) disabled:bg-[#FFEEF2] disabled:text-[#FE8EA8]">
+        <span>
             Госпитализация
-        </p>
+        </span>
     </button>
-    <button disabled class="secondary-normal-button w-[280px] h-[44px] bg-(--soft-red) rounded-[16px] font-[HeliosExt] font-medium text-[13px]  text-white hover:bg-[#FFEEF2] hover:text-(--soft-red) disabled:bg-[#FFEEF2] disabled:text-[#FE8EA8]">
-        <p>
+    <a class="disabled-secondary" href="#">
+        <button class="secondary normal-button w-[280px] p-[12.25px] bg-(--soft-red) rounded-[16px] font-[HeliosExt] font-medium text-[13px]  text-white hover:bg-[#FFEEF2] hover:text-(--soft-red) disabled:bg-[#FFEEF2] disabled:text-[#FE8EA8]">
+        <span>
             Госпитализация
-        </p>
-    </button>
-    <button class="secondary-normal-button load w-[280px] h-[44px] bg-(--soft-red) rounded-[16px] font-[HeliosExt] font-medium text-[13px]  text-white hover:bg-[#FFEEF2] hover:text-(--soft-red) disabled:bg-[#FFEEF2] disabled:text-[#FE8EA8]">
-        <p>
+        </span>
+        </button>
+    </a>
+    <button class="secondary normal-button load w-[280px] p-[12.25px] bg-(--soft-red) rounded-[16px] font-[HeliosExt] font-medium text-[13px]  text-white hover:bg-[#FFEEF2] hover:text-(--soft-red) disabled:bg-[#FFEEF2] disabled:text-[#FE8EA8]">
+        <span>
             Госпитализация
-        </p>
+        </span>
     </button>
     <!---->
     <!--small-->
-    <button class="secondary-small-button w-[140px] h-[40px] bg-white rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-(--green) border-2 border-(--green) hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#E2F5F6] disabled:text-[#80D3D5]) disabled:border-0">
-        <p>
+    <button class="secondary small-button w-[140px] p-[10.25px] bg-white rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-(--green) border-2 border-(--green) hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#E2F5F6] disabled:text-[#80D3D5]) disabled:border-0">
+        <span>
             все акции
-        </p>
+        </span>
     </button>
-    <button disabled class="secondary-small-button w-[140px] h-[40px] bg-white rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-(--green) border-2 border-(--green) hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#E2F5F6] disabled:text-[#80D3D5] disabled:border-0">
-        <p>
+    <a class="disabled-secondary small" href="#">
+        <button class="secondary small-button w-[140px] p-[10.25px] bg-white rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-(--green) border-2 border-(--green) hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#E2F5F6] disabled:text-[#80D3D5] disabled:border-0">
+        <span>
             все акции
-        </p>
-    </button>
-    <button class="secondary-small-button load  w-[140px] h-[40px] bg-white rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-(--green) border-2 border-(--green) hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#E2F5F6] disabled:text-[#80D3D5] disabled:border-0">
-        <p>
+        </span>
+        </button>
+    </a>
+    <button class="secondary small-button load  w-[140px] p-[10.25px] bg-white rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-(--green) border-2 border-(--green) hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#E2F5F6] disabled:text-[#80D3D5] disabled:border-0">
+        <span>
             все акции
-        </p>
+        </span>
     </button>
-    <button class="secondary-small-button w-[140px] h-[40px] bg-white rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-(--green) border-2 border-(--green) hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#E2F5F6] disabled:text-[#80D3D5] disabled:border-0">
+    <button class="secondary small-button w-[140px] p-[10.25px] bg-white rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-(--green) border-2 border-(--green) hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#E2F5F6] disabled:text-[#80D3D5] disabled:border-0">
         <div class="flex justify-center gap-[4px] items-center">
-            <p>
+            <span>
                 все акции
-            </p>
+            </span>
             <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M13.6665 7.81706L3.6665 7.81706" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                       stroke-linejoin="round"/>
@@ -153,77 +195,86 @@
         </div>
 
     </button>
-    <button disabled class="secondary-small-button w-[140px] h-[40px] bg-white rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-(--green) border-2 border-(--green) hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#E2F5F6] disabled:text-[#80D3D5] disabled:border-0">
-        <div class="flex justify-center gap-[4px] items-center">
-            <p>
+    <a class="disabled-secondary small" href="#">
+        <button class="secondary small-button w-[140px] p-[10.25px] bg-white rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-(--green) border-2 border-(--green) hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#E2F5F6] disabled:text-[#80D3D5] disabled:border-0">
+            <div class="flex justify-center gap-[4px] items-center">
+            <span>
                 все акции
-            </p>
-            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M13.6665 7.81706L3.6665 7.81706" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round"/>
-                <path d="M9.6333 3.80083L13.6666 7.81683L9.6333 11.8335" stroke="currentColor" stroke-width="2"
-                      stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </div>
+            </span>
+                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.6665 7.81706L3.6665 7.81706" stroke="currentColor" stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                    <path d="M9.6333 3.80083L13.6666 7.81683L9.6333 11.8335" stroke="currentColor" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
 
-    </button>
+        </button>
+    </a>
 </div>
 <div class="white grid grid-cols-3 gap-4 bg-[#C4DBDF] mt-2 p-5">
     <!--large-->
-    <button class="white-large-button w-[360px] h-[56px] bg-white rounded-[16px] font-[HeliosExt] font-medium text-[15px]  text-black hover:bg-[rgba(255,255,255,.1)] hover:text-white hover:border-2 hover:border-white disabled:bg-[rgba(255,255,255,.5)] disabled:text-[#80D3D5]">
-        <p>
+    <button class="white large-button w-[360px]  p-[16.75px] bg-white rounded-[16px] font-[HeliosExt] font-medium text-[15px]  text-black hover:bg-[rgba(255,255,255,.1)] hover:text-white hover:border-2 hover:border-white disabled:bg-[rgba(255,255,255,.5)] disabled:text-[#80D3D5]">
+        <span>
             large
-        </p>
+        </span>
     </button>
-    <button disabled class="white-large-button w-[360px] h-[56px] bg-white rounded-[16px] font-[HeliosExt] font-medium text-[15px]  text-black hover:bg-[rgba(255,255,255,.1)] hover:text-white hover:border-2 hover:border-white disabled:bg-[rgba(255,255,255,.5)] disabled:text-[#80D3D5]">
-        <p>
+    <a class="disabled-white" href="#">
+        <button class="white large-button w-[360px]  p-[16.75px] bg-white rounded-[16px] font-[HeliosExt] font-medium text-[15px]  text-black hover:bg-[rgba(255,255,255,.1)] hover:text-white hover:border-2 hover:border-white disabled:bg-[rgba(255,255,255,.5)] disabled:text-[#80D3D5]">
+        <span>
             large
-        </p>
-    </button>
-    <button class="white-large-button load w-[360px] h-[56px] bg-white rounded-[16px] font-[HeliosExt] font-medium text-[15px]  text-black hover:bg-[rgba(255,255,255,.1)] hover:text-white hover:border-2 hover:border-white disabled:bg-[rgba(255,255,255,.5)] disabled:text-[#80D3D5]">
-        <p>
+        </span>
+        </button>
+    </a>
+    <button class="white large-button load w-[360px]  p-[16.75px] bg-white rounded-[16px] font-[HeliosExt] font-medium text-[15px]  text-black hover:bg-[rgba(255,255,255,.1)] hover:text-white hover:border-2 hover:border-white disabled:bg-[rgba(255,255,255,.5)] disabled:text-[#80D3D5]">
+        <span>
             large
-        </p>
+        </span>
     </button>
     <!---->
     <!--normal-->
-    <button class="white-normal-button w-[280px] h-[44px] bg-white rounded-[16px] font-[HeliosExt] font-medium text-[13px]  text-black hover:bg-[rgba(255,255,255,.1)] hover:text-white hover:border-2 hover:border-white disabled:bg-[rgba(255,255,255,.5)] disabled:text-[#80D3D5]">
-        <p>
+    <button class="white normal-button w-[280px] p-[12.25px] bg-white rounded-[16px] font-[HeliosExt] font-medium text-[13px]  text-black hover:bg-[rgba(255,255,255,.1)] hover:text-white hover:border-2 hover:border-white disabled:bg-[rgba(255,255,255,.5)] disabled:text-[#80D3D5]">
+        <span>
             Записаться к врачу
-        </p>
+        </span>
     </button>
-    <button disabled class="white-normal-button w-[280px] h-[44px] bg-white rounded-[16px] font-[HeliosExt] font-medium text-[13px]  text-black hover:bg-[rgba(255,255,255,.1)] hover:text-white hover:border-2 hover:border-white disabled:bg-[rgba(255,255,255,.5)] disabled:text-[#80D3D5]">
-        <p>
+    <a class="disabled-white" href="#">
+        <button class="white normal-button w-[280px] p-[12.25px] bg-white rounded-[16px] font-[HeliosExt] font-medium text-[13px]  text-black hover:bg-[rgba(255,255,255,.1)] hover:text-white hover:border-2 hover:border-white disabled:bg-[rgba(255,255,255,.5)] disabled:text-[#80D3D5]">
+        <span>
             Записаться к врачу
-        </p>
-    </button>
-    <button class="white-normal-button load w-[280px] h-[44px] bg-white rounded-[16px] font-[HeliosExt] font-medium text-[13px]  text-black hover:bg-[rgba(255,255,255,.1)] hover:text-white hover:border-2 hover:border-white disabled:bg-[rgba(255,255,255,.5)] disabled:text-[#80D3D5]">
-        <p>
+        </span>
+        </button>
+    </a>
+    <button class="white normal-button load w-[280px] p-[12.25px] bg-white rounded-[16px] font-[HeliosExt] font-medium text-[13px]  text-black hover:bg-[rgba(255,255,255,.1)] hover:text-white hover:border-2 hover:border-white disabled:bg-[rgba(255,255,255,.5)] disabled:text-[#80D3D5]">
+        <span>
             Записаться к врачу
-        </p>
+        </span>
     </button>
     <!---->
     <!--small-->
-    <button class="white-small-button w-[140px] h-[40px] bg-white rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-black hover:bg-[rgba(255,255,255,.1)] hover:text-white hover:border-2 hover:border-white disabled:bg-[rgba(255,255,255,.5)] disabled:text-[#80D3D5]">
-        <p>
+    <button class="white small-button w-[140px] p-[10.25px] bg-white rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-black hover:bg-[rgba(255,255,255,.1)] hover:text-white hover:border-2 hover:border-white disabled:bg-[rgba(255,255,255,.5)] disabled:text-[#80D3D5]">
+        <span>
             запись
-        </p>
+        </span>
     </button>
-    <button disabled class="white-small-button w-[140px] h-[40px] bg-white rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-black hover:bg-[rgba(255,255,255,.1)] hover:text-white hover:border-2 hover:border-white disabled:bg-[rgba(255,255,255,.5)] disabled:text-[#80D3D5]">
-        <p>
-            запись
-        </p>
-    </button>
-    <button class="white-small-button load  w-[140px] h-[40px] bg-white rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-black hover:bg-[rgba(255,255,255,.1)] hover:text-white hover:border-2 hover:border-white disabled:bg-[rgba(255,255,255,.5)] disabled:text-[#80D3D5]">
-        <p>
-            запись
-        </p>
-    </button>
-    <button class="white-small-button w-[140px] h-[40px] bg-white rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-black hover:bg-[rgba(255,255,255,.1)] hover:text-white hover:border-2 hover:border-white disabled:bg-[rgba(255,255,255,.5)] disabled:text-[#80D3D5]">
-        <div class="flex justify-center gap-[4px] items-center">
-            <p>
+    <a class="disabled-white" href="#">
+        <button class="white small-button w-[140px] p-[10.25px] bg-white rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-black hover:bg-[rgba(255,255,255,.1)] hover:text-white hover:border-2 hover:border-white disabled:bg-[rgba(255,255,255,.5)] disabled:text-[#80D3D5]">
+            <span>
                 запись
-            </p>
+            </span>
+        </button>
+    </a>
+    <button class="white small-button load  w-[140px] p-[10.25px] bg-white rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-black hover:bg-[rgba(255,255,255,.1)] hover:text-white hover:border-2 hover:border-white disabled:bg-[rgba(255,255,255,.5)] disabled:text-[#80D3D5]">
+        <span>
+            запись
+        </span>
+    </button>
+    <button class="white small-button w-[140px] p-[10.25px] bg-white rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-black hover:bg-[rgba(255,255,255,.1)] hover:text-white hover:border-2 hover:border-white disabled:bg-[rgba(255,255,255,.5)] disabled:text-[#80D3D5]">
+        <div class="flex justify-center gap-[4px] items-center">
+            <span>
+                запись
+            </span>
             <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M13.6665 7.81706L3.6665 7.81706" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                       stroke-linejoin="round"/>
@@ -233,11 +284,12 @@
         </div>
 
     </button>
-    <button disabled class="white-small-button w-[140px] h-[40px] bg-white rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-black hover:bg-[rgba(255,255,255,.1)] hover:text-white hover:border-2 hover:border-white disabled:bg-[rgba(255,255,255,.5)] disabled:text-[#80D3D5]">
+    <a class="disabled-white" href="#">
+    <button class="white small-button w-[140px] p-[10.25px] bg-white rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-black hover:bg-[rgba(255,255,255,.1)] hover:text-white hover:border-2 hover:border-white disabled:bg-[rgba(255,255,255,.5)] disabled:text-[#80D3D5]">
         <div class="flex justify-center gap-[4px] items-center">
-            <p>
+            <span>
                 запись
-            </p>
+            </span>
             <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M13.6665 7.81706L3.6665 7.81706" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                       stroke-linejoin="round"/>
@@ -247,6 +299,7 @@
         </div>
 
     </button>
+    </a>
 </div>
 
 <script>
@@ -262,7 +315,7 @@
         btns.forEach(btn => {
             btn.innerHTML = `
                 <div class="flex justify-center">
-                    <svg class="animate-spin  " width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="animate-spin  " viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10.0002 1.66683C8.35198 1.66683 6.74082 2.15557 5.37041 3.07125C4 3.98693 2.9319 5.28842 2.30117 6.81113C1.67044 8.33385 1.50541 10.0094 1.82695 11.6259C2.14849 13.2424 2.94217 14.7273 4.1076 15.8927C5.27304 17.0582 6.7579 17.8518 8.37441 18.1734C9.99092 18.4949 11.6665 18.3299 13.1892 17.6992C14.7119 17.0684 16.0134 16.0003 16.9291 14.6299C17.8448 13.2595 18.3335 11.6483 18.3335 10.0002" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
