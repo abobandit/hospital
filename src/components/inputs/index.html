@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./../../../src/styles/style.css">
+    <link rel="stylesheet" href="./../../../src/styles/output.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body class="flex flex-col items-center justify-center pt-4 gap-5">
+    <script src="./index.js"></script>
+    <div class="flex flex-wrap px-4 gap-5">
+        <div data-f-item>
+            <div class="relative">
+                <input
+                        placeholder="Phone Number"
+                        value="1"
+                        data-f-field
+                        class="
+                        px-[24px]
+                        py-4
+                        w-full
+                        text-[17px]
+                        text-(--black)
+                        placeholder:text-(--black)
+                        leading-none
+                        border-[1.5px]
+                        rounded-2xl
+                "/>
+                <button data-f-clear class="absolute top-[50%] right-[14px] transform-[translateY(-50%)]">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 6L18.7742 18.7742" stroke="#D6D6D6" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                        <path d="M6 18.7744L18.7742 6.00022" stroke="#D6D6D6" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="pl-[24px] mt-2 text-base text-(--error-dark)" data-f-error>
+                Uh oh! There was an error!
+            </div>
+            <div
+                    data-f-success
+                    class="
+                        pl-[24px]
+                        mt-2
+                        text-base
+                        text-(--green)"
+            >
+                Success message!
+            </div>
+            <div class="pl-[24px] mt-2 text-base text-(--grey)" data-f-suggest>
+                Подсказка для заполнения поля
+            </div>
+        </div>
+        <div data-f-item class="suggest">
+            <div class="relative">
+                <input
+                        placeholder="Phone Number"
+                        value="1"
+                        data-f-field
+                        class="
+                        px-[24px]
+                        py-4
+                        w-full
+                        text-[17px]
+                        text-(--black)
+                        placeholder:text-(--black)
+                        leading-none
+                        border-[1.5px]
+                        rounded-2xl
+                "/>
+                <button data-f-clear class="absolute top-[50%] right-[14px] transform-[translateY(-50%)]">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 6L18.7742 18.7742" stroke="#D6D6D6" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                        <path d="M6 18.7744L18.7742 6.00022" stroke="#D6D6D6" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="pl-[24px] mt-2 text-base text-(--error-dark)" data-f-error>
+                Uh oh! There was an error!
+            </div>
+            <div
+                    data-f-success
+                    class="
+                        pl-[24px]
+                        mt-2
+                        text-base
+                        text-(--green)"
+            >
+                Success message!
+            </div>
+            <div class="pl-[24px] mt-2 text-base text-(--grey)" data-f-suggest>
+                Подсказка для заполнения поля
+            </div>
+        </div>
+        <div data-f-item class="error">
+            <div class="relative">
+                <input
+                        placeholder="Phone Number"
+                        value="1"
+                        data-f-field
+                        class="
+                        px-[24px]
+                        py-4
+                        w-full
+                        text-[17px]
+                        text-(--black)
+                        placeholder:text-(--black)
+                        leading-none
+                        border-[1.5px]
+                        rounded-2xl
+                "/>
+                <button data-f-clear class="absolute top-[50%] right-[14px] transform-[translateY(-50%)]">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 6L18.7742 18.7742" stroke="#D6D6D6" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                        <path d="M6 18.7744L18.7742 6.00022" stroke="#D6D6D6" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="pl-[24px] mt-2 text-base text-(--error-dark)" data-f-error>
+                Uh oh! There was an error!
+            </div>
+            <div class="pl-[24px] mt-2 text-base text-(--grey)" data-f-suggest>
+                Подсказка для заполнения поля
+            </div>
+            <div
+                    data-f-success
+                    class="
+                        pl-[24px]
+                        mt-2
+                        text-base
+                        text-(--green)"
+            >
+                Success message!
+            </div>
+        </div>
+        <div data-f-item class="success">
+            <div class="relative">
+                <input
+                        placeholder="Phone Number"
+                        value="1"
+                        data-f-field
+                        class="
+                        px-[24px]
+                        py-4
+                        w-full
+                        text-[17px]
+                        text-(--black)
+                        placeholder:text-(--black)
+                        leading-none
+                        border-[1.5px]
+                        rounded-2xl
+                        focus:placeholder:text-(--grey)
+                "/>
+                <button data-f-clear class="absolute top-[50%] right-[14px] transform-[translateY(-50%)]">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 6L18.7742 18.7742" stroke="#D6D6D6" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                        <path d="M6 18.7744L18.7742 6.00022" stroke="#D6D6D6" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div
+                    data-f-success
+                    class="
+                        pl-[24px]
+                        mt-2
+                        text-base
+                        text-(--green)!"
+            >
+                Success message!
+            </div>
+            <div class="pl-[24px] mt-2 text-base text-(--error-dark)" data-f-error>
+                Uh oh! There was an error!
+            </div>
+            <div class="pl-[24px] mt-2 text-base text-(--grey)" data-f-suggest>
+                Подсказка для заполнения поля
+            </div>
+        </div>
+        <div data-f-item>
+            <div class="relative">
+                <input
+                        placeholder="Phone Number"
+                        value="1"
+                        data-f-field
+                        disabled
+                        class="
+                        px-[24px]
+                        w-full
+                        py-4
+                        text-[17px]
+                        text-(--black)
+                        placeholder:text-(--black)
+                        leading-none
+                        border-[1.5px]
+                        rounded-2xl
+                        focus:placeholder:text-(--grey)
+                "/>
+                <button data-f-clear class="absolute top-[50%] right-[14px] transform-[translateY(-50%)]">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 6L18.7742 18.7742" stroke="#D6D6D6" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                        <path d="M6 18.7744L18.7742 6.00022" stroke="#D6D6D6" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div
+                    data-f-success
+                    class="
+                        pl-[24px]
+                        mt-2
+                        text-base
+                        text-(--green)!"
+            >
+                Success message!
+            </div>
+            <div class="pl-[24px] mt-2 text-base text-(--error-dark)" data-f-error>
+                Uh oh! There was an error!
+            </div>
+            <div class="pl-[24px] mt-2 text-base text-(--grey)" data-f-suggest>
+                Подсказка для заполнения поля
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-wrap px-4 w-full gap-5">
+        <div data-f-item>
+            <div class="relative">
+                <input
+                        placeholder="Phone Number"
+                        value="1"
+                        data-f-field
+                        class="
+                        px-[24px]
+                        w-full
+                        py-3
+                        text-[15px]
+                        text-(--black)
+                        placeholder:text-(--black)
+                        leading-none
+                        border-[1.5px]
+                        rounded-2xl
+                "/>
+                <button data-f-clear class="absolute top-[50%] right-[14px] transform-[translateY(-50%)]">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 6L18.7742 18.7742" stroke="#D6D6D6" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                        <path d="M6 18.7744L18.7742 6.00022" stroke="#D6D6D6" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="pl-[24px] mt-2 text-base text-(--error-dark)" data-f-error>
+                Uh oh! There was an error!
+            </div>
+            <div
+                    data-f-success
+                    class="
+                        pl-[24px]
+                        mt-2
+                        text-base
+                        text-(--green)"
+            >
+                Success message!
+            </div>
+            <div class="pl-[24px] mt-2 text-base text-(--grey)" data-f-suggest>
+                Подсказка для заполнения поля
+            </div>
+        </div>
+        <div data-f-item class="suggest">
+            <div class="relative">
+                <input
+                        placeholder="Phone Number"
+                        value="1"
+                        data-f-field
+                        class="
+                        px-[24px]
+                        w-full
+                        py-3
+                        text-[15px]
+                        text-(--black)
+                        placeholder:text-(--black)
+                        leading-none
+                        border-[1.5px]
+                        rounded-2xl
+                "/>
+                <button data-f-clear class="absolute top-[50%] right-[14px] transform-[translateY(-50%)]">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 6L18.7742 18.7742" stroke="#D6D6D6" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                        <path d="M6 18.7744L18.7742 6.00022" stroke="#D6D6D6" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="pl-[24px] mt-2 text-base text-(--error-dark)" data-f-error>
+                Uh oh! There was an error!
+            </div>
+            <div
+                    data-f-success
+                    class="
+                        pl-[24px]
+                        mt-2
+                        text-base
+                        text-(--green)"
+            >
+                Success message!
+            </div>
+            <div class="pl-[24px] mt-2 text-base text-(--grey)" data-f-suggest>
+                Подсказка для заполнения поля
+            </div>
+        </div>
+        <div data-f-item class="error">
+            <div class="relative">
+                <input
+                        placeholder="Phone Number"
+                        value="1"
+                        data-f-field
+                        class="
+                        px-[24px]
+                        w-full
+                        py-3
+                        text-[15px]
+                        text-(--black)
+                        placeholder:text-(--black)
+                        leading-none
+                        border-[1.5px]
+                        rounded-2xl
+                "/>
+                <button data-f-clear class="absolute top-[50%] right-[14px] transform-[translateY(-50%)]">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 6L18.7742 18.7742" stroke="#D6D6D6" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                        <path d="M6 18.7744L18.7742 6.00022" stroke="#D6D6D6" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="pl-[24px] mt-2 text-base text-(--error-dark)" data-f-error>
+                Uh oh! There was an error!
+            </div>
+            <div class="pl-[24px] mt-2 text-base text-(--grey)" data-f-suggest>
+                Подсказка для заполнения поля
+            </div>
+            <div
+                    data-f-success
+                    class="
+                        pl-[24px]
+                        mt-2
+                        text-base
+                        text-(--green)"
+            >
+                Success message!
+            </div>
+        </div>
+        <div data-f-item class="success">
+            <div class="relative">
+                <input
+                        placeholder="Phone Number"
+                        value="1"
+                        data-f-field
+                        class="
+                        px-[24px]
+                        w-full
+                        py-3
+                        text-[15px]
+                        text-(--black)
+                        placeholder:text-(--black)
+                        leading-none
+                        border-[1.5px]
+                        rounded-2xl
+                        focus:placeholder:text-(--grey)
+                "/>
+                <button data-f-clear class="absolute top-[50%] right-[14px] transform-[translateY(-50%)]">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 6L18.7742 18.7742" stroke="#D6D6D6" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                        <path d="M6 18.7744L18.7742 6.00022" stroke="#D6D6D6" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div
+                    data-f-success
+                    class="
+                        pl-[24px]
+                        mt-2
+                        text-base
+                        text-(--green)!"
+            >
+                Success message!
+            </div>
+            <div class="pl-[24px] mt-2 text-base text-(--error-dark)" data-f-error>
+                Uh oh! There was an error!
+            </div>
+            <div class="pl-[24px] mt-2 text-base text-(--grey)" data-f-suggest>
+                Подсказка для заполнения поля
+            </div>
+        </div>
+        <div data-f-item>
+            <div class="relative">
+                <input
+                        placeholder="Phone Number"
+                        value="1"
+                        data-f-field
+                        disabled
+                        class="
+                        px-[24px]
+                        w-full
+                        py-3
+                        text-[15px]
+                        text-(--black)
+                        placeholder:text-(--black)
+                        leading-none
+                        border-[1.5px]
+                        rounded-2xl
+                        focus:placeholder:text-(--grey)
+                "/>
+                <button data-f-clear class="absolute top-[50%] right-[14px] transform-[translateY(-50%)]">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 6L18.7742 18.7742" stroke="#D6D6D6" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                        <path d="M6 18.7744L18.7742 6.00022" stroke="#D6D6D6" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div
+                    data-f-success
+                    class="
+                        pl-[24px]
+                        mt-2
+                        text-base
+                        text-(--green)!"
+            >
+                Success message!
+            </div>
+            <div class="pl-[24px] mt-2 text-base text-(--error-dark)" data-f-error>
+                Uh oh! There was an error!
+            </div>
+            <div class="pl-[24px] mt-2 text-base text-(--grey)" data-f-suggest>
+                Подсказка для заполнения поля
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
