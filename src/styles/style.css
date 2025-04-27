@@ -4,6 +4,8 @@
     --light-green: #63D7DF;
     --light-pale-green: #A2E5EA;
     --soft-red: #F85077;
+    --error-default: #ED2E7E;
+    --error-dark: #C30052;
     --grey: #D6D6D6;
     --light-grey: #F0F5F6;
     --black: #1B1B26;
@@ -14,8 +16,18 @@ body{
 button{
     cursor: pointer;
 }
+a {
+    cursor: pointer;
+}
 button:disabled{
-    cursor: auto;
+    cursor: not-allowed;
+}
+
+input {
+    &:focus,
+    &:focus-visible {
+        outline: none
+    }
 }
 @font-face {
     font-family: 'Mulish';

@@ -1,0 +1,92 @@
+[data-f-item] {
+    border-color: var(--pale-green);
+
+    [data-f-error],
+    [data-f-success],
+    [data-f-suggest] {
+        display: none;
+    }
+
+    [data-f-clear] {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s ease;
+    }
+
+    [data-f-field] {
+        border-color: var(--pale-green);
+    }
+
+    [data-f-field]:focus {
+        border-color: var(--green);
+    }
+
+    [data-f-field]:focus::placeholder {
+        color: var(--grey);
+    }
+
+    [data-f-field]:not(:placeholder-shown) {
+        border-color: var(--black);
+    }
+
+    [data-f-field]:not(:placeholder-shown) + [data-f-clear] {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    [data-f-field]:disabled {
+        border-color: var(--pale-green);
+        color: var(--grey);
+        cursor: not-allowed;
+    }
+}
+
+[data-f-item].success {
+    [data-f-field] {
+        border-color: var(--green);
+    }
+
+    [data-f-field]:focus {
+        border-color: var(--green);
+    }
+
+    [data-f-field]:not(:placeholder-shown) {
+        border-color: var(--green);
+    }
+
+    [data-f-success] {
+        display: block;
+    }
+
+    svg path {
+        stroke: var(--green);
+    }
+}
+
+[data-f-item].error {
+    [data-f-field] {
+        border-color: var(--error-default);
+    }
+
+    [data-f-field]:focus {
+        border-color: var(--error-default);
+    }
+
+    [data-f-field]:not(:placeholder-shown) {
+        border-color: var(--error-default);
+    }
+
+    [data-f-error] {
+        display: block;
+    }
+
+    svg path {
+        stroke: var(--error-default);
+    }
+}
+
+[data-f-item].suggest {
+    [data-f-suggest] {
+        display: block;
+    }
+}

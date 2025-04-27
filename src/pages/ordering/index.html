@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./../../styles/style.css">
+    <link rel="stylesheet" href="./../../styles/output.css">
+</head>
+<body class="h-dvh flex flex-col">
+<header class="relative flex p-[17.5px] justify-center w-full h-[90px] bg-white border-b border-[#E5E5E5]">
+    <div class="text-center">
+        <h1 class="text-[35px] leading-[1.05] text-(--green) font-bold font-[HeliosExt]">НАКФФ</h1>
+        <h3 class="text-[20px] leading-[1.05] text-(--green) font-semibold font-[Mulish]">Медицинская клиника </h3>
+    </div>
+    <a href="/"
+       title="на главную"
+       class="absolute left-[17.5px] top-[50%] transform-[translateY(-50%)] secondary-small-button w-[140px] h-[40px] flex justify-center bg-white rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-(--green) border-2 border-(--green) hover:bg-[#E2F5F6] hover:text-(--green) transition-all ease-linear **:transition-all **:ease-linear">
+        <span class="flex justify-center gap-[4px] items-center">
+            <span>
+                на главную
+            </span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.08993 12.8491V10.8106C5.08993 10.2902 5.51486 9.86837 6.03904 9.86837H7.95515C8.20687 9.86837 8.44828 9.96764 8.62627 10.1443C8.80427 10.321 8.90426 10.5607 8.90426 10.8106V12.8491C8.90267 13.0654 8.98812 13.2734 9.14166 13.4269C9.2952 13.5805 9.50411 13.6668 9.72204 13.6668H11.0293C11.6398 13.6684 12.2259 13.4287 12.6582 13.0007C13.0905 12.5727 13.3334 11.9915 13.3334 11.3854V5.57807C13.3334 5.08847 13.1148 4.62406 12.7365 4.30994L8.28943 0.784075C7.51585 0.165871 6.40749 0.185831 5.65701 0.831482L1.31142 4.30994C0.915242 4.6148 0.67845 5.08059 0.666748 5.57807V11.3795C0.666748 12.6427 1.69834 13.6668 2.97086 13.6668H4.24827C4.7009 13.6668 5.06875 13.3043 5.07203 12.855L5.08993 12.8491Z"
+                      fill="#00A7AA"/>
+            </svg>
+        </span>
+    </a>
+</header>
+<main class="relative w-full h-full bg-[#F0F5F6E5] overflow-auto pt-16 pb-10 px-[140px]">
+    <img class="absolute w-full h-full object-cover inset-0 -z-1" src="../../assets/img/main-banner.png" alt="">
+    <div class="flex items-center justify-center gap-[9px]">
+        <h2 class="text-center text-[26px] font-[HeliosExt] font-bold">
+            Заказ меню на завтра
+        </h2>
+    </div>
+    <div class="hidden text-[18px] text-center leading-[24px] font-[Mulish] font-semibold">
+        <p>Для замены заказанного меню нажмите на кнопку принятой позиции</p>
+    </div>
+
+    <!-- 1-ое состояние блока -->
+    <div class="hidden mt-8 flex items-center flex-col gap-[30px]">
+        <a href="" title="Завтрак"
+           class="primary-large-button flex justify-center items-center flex-wrap gap-x-2 gap-y-1 shrink-0 py-[16px] px-[60px] w-[360px] bg-(--green) rounded-[16px] font-[HeliosExt] font-medium text-[15px]  text-white hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#80D3D5] disabled:text-white transition-all ease-linear **:transition-all **:ease-linear">
+                    <span class="text-center">
+                        Завтрак
+                    </span>
+        </a>
+        <a href="" title="Обед"
+           class="primary-large-button flex justify-center items-center flex-wrap gap-x-2 gap-y-1 shrink-0 py-[16px] px-[60px] w-[360px] bg-(--green) rounded-[16px] font-[HeliosExt] font-medium text-[15px]  text-white hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#80D3D5] disabled:text-white transition-all ease-linear **:transition-all **:ease-linear">
+                    <span class="text-center">
+                        Обед
+                    </span>
+        </a>
+        <a href="" title="Ужин"
+           class="primary-large-button flex justify-center items-center flex-wrap gap-x-2 gap-y-1 shrink-0 py-[16px] px-[60px] w-[360px] bg-(--green) rounded-[16px] font-[HeliosExt] font-medium text-[15px]  text-white hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#80D3D5] disabled:text-white transition-all ease-linear **:transition-all **:ease-linear">
+                    <span class="text-center">
+                        Ужин
+                    </span>
+        </a>
+    </div>
+
+    <!-- 2-ое состояние блока -->
+    <div class="mt-8 flex items-center flex-col gap-[30px]">
+        <a title="Завтрак"
+           class="primary-large-button flex justify-center items-center flex-wrap gap-x-2 gap-y-1 shrink-0 flex py-[16px] px-[60px] w-[360px] bg-(--green) rounded-[16px] font-[HeliosExt] font-medium text-[15px]  text-white hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#80D3D5] disabled:text-white *:fill-white hover:*:fill-(--green)! transition-all ease-linear **:transition-all **:ease-linear">
+                    <span class="text-center">
+                        Завтрак
+                    </span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M10.1102 0.340386C11.0692 0.280448 12.0149 0.613437 12.7275 1.2661C13.3802 1.97869 13.7131 2.92438 13.6599 3.89005V10.1103C13.7198 11.0759 13.3802 12.0216 12.7341 12.7342C12.0215 13.3869 11.0692 13.7199 10.1102 13.6599H3.88989C2.92422 13.7199 1.97852 13.3869 1.26592 12.7342C0.613256 12.0216 0.280265 11.0759 0.340203 10.1103V3.89005C0.280265 2.92438 0.613256 1.97869 1.26592 1.2661C1.97852 0.613437 2.92422 0.280448 3.88989 0.340386H10.1102ZM6.32073 10.2302L10.8028 5.73481C11.209 5.3219 11.209 4.65592 10.8028 4.24968L9.93702 3.3839C9.52411 2.971 8.85813 2.971 8.44522 3.3839L7.99901 3.83677C7.93241 3.90337 7.93241 4.01658 7.99901 4.08318C7.99901 4.08318 9.05792 5.13543 9.0779 5.16206C9.15116 5.24198 9.19778 5.34854 9.19778 5.46841C9.19778 5.70817 9.00464 5.90796 8.75823 5.90796C8.64501 5.90796 8.53845 5.86134 8.4652 5.78808L7.353 4.68256C7.29973 4.62928 7.20649 4.62928 7.15321 4.68256L3.97647 7.85927C3.7567 8.07905 3.63016 8.37208 3.6235 8.68509L3.58354 10.2635C3.58354 10.35 3.61018 10.4299 3.67012 10.4899C3.73006 10.5498 3.80997 10.5831 3.89655 10.5831H5.46161C5.78128 10.5831 6.08764 10.4566 6.32073 10.2302Z"/>
+            </svg>
+            <span class="w-full text-center font-[Mulish]">
+                        Заказ сделан
+                    </span>
+        </a>
+        <a title="Обед"
+           class="primary-large-button flex justify-center items-center flex-wrap gap-x-2 gap-y-1 shrink-0 flex py-[16px] px-[60px] w-[360px] bg-(--green) rounded-[16px] font-[HeliosExt] font-medium text-[15px]  text-white hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#80D3D5] disabled:text-white *:fill-white hover:*:fill-(--green)! transition-all ease-linear **:transition-all **:ease-linear">
+                    <span class="text-center">
+                        Обед
+                    </span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M10.1102 0.340386C11.0692 0.280448 12.0149 0.613437 12.7275 1.2661C13.3802 1.97869 13.7131 2.92438 13.6599 3.89005V10.1103C13.7198 11.0759 13.3802 12.0216 12.7341 12.7342C12.0215 13.3869 11.0692 13.7199 10.1102 13.6599H3.88989C2.92422 13.7199 1.97852 13.3869 1.26592 12.7342C0.613256 12.0216 0.280265 11.0759 0.340203 10.1103V3.89005C0.280265 2.92438 0.613256 1.97869 1.26592 1.2661C1.97852 0.613437 2.92422 0.280448 3.88989 0.340386H10.1102ZM6.32073 10.2302L10.8028 5.73481C11.209 5.3219 11.209 4.65592 10.8028 4.24968L9.93702 3.3839C9.52411 2.971 8.85813 2.971 8.44522 3.3839L7.99901 3.83677C7.93241 3.90337 7.93241 4.01658 7.99901 4.08318C7.99901 4.08318 9.05792 5.13543 9.0779 5.16206C9.15116 5.24198 9.19778 5.34854 9.19778 5.46841C9.19778 5.70817 9.00464 5.90796 8.75823 5.90796C8.64501 5.90796 8.53845 5.86134 8.4652 5.78808L7.353 4.68256C7.29973 4.62928 7.20649 4.62928 7.15321 4.68256L3.97647 7.85927C3.7567 8.07905 3.63016 8.37208 3.6235 8.68509L3.58354 10.2635C3.58354 10.35 3.61018 10.4299 3.67012 10.4899C3.73006 10.5498 3.80997 10.5831 3.89655 10.5831H5.46161C5.78128 10.5831 6.08764 10.4566 6.32073 10.2302Z"/>
+            </svg>
+            <span class="w-full text-center font-[Mulish]">
+                    Заказ сделан
+            </span>
+        </a>
+        <a title="Ужин"
+           class="primary-large-button flex justify-center items-center flex-wrap gap-x-2 gap-y-1 shrink-0 flex py-[16px] px-[60px] w-[360px] bg-(--green) rounded-[16px] font-[HeliosExt] font-medium text-[15px]  text-white hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#80D3D5] disabled:text-white *:fill-white hover:*:fill-(--green)! transition-all ease-linear **:transition-all **:ease-linear">
+                    <span class="text-center">
+                        Ужин
+                    </span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M10.1102 0.340386C11.0692 0.280448 12.0149 0.613437 12.7275 1.2661C13.3802 1.97869 13.7131 2.92438 13.6599 3.89005V10.1103C13.7198 11.0759 13.3802 12.0216 12.7341 12.7342C12.0215 13.3869 11.0692 13.7199 10.1102 13.6599H3.88989C2.92422 13.7199 1.97852 13.3869 1.26592 12.7342C0.613256 12.0216 0.280265 11.0759 0.340203 10.1103V3.89005C0.280265 2.92438 0.613256 1.97869 1.26592 1.2661C1.97852 0.613437 2.92422 0.280448 3.88989 0.340386H10.1102ZM6.32073 10.2302L10.8028 5.73481C11.209 5.3219 11.209 4.65592 10.8028 4.24968L9.93702 3.3839C9.52411 2.971 8.85813 2.971 8.44522 3.3839L7.99901 3.83677C7.93241 3.90337 7.93241 4.01658 7.99901 4.08318C7.99901 4.08318 9.05792 5.13543 9.0779 5.16206C9.15116 5.24198 9.19778 5.34854 9.19778 5.46841C9.19778 5.70817 9.00464 5.90796 8.75823 5.90796C8.64501 5.90796 8.53845 5.86134 8.4652 5.78808L7.353 4.68256C7.29973 4.62928 7.20649 4.62928 7.15321 4.68256L3.97647 7.85927C3.7567 8.07905 3.63016 8.37208 3.6235 8.68509L3.58354 10.2635C3.58354 10.35 3.61018 10.4299 3.67012 10.4899C3.73006 10.5498 3.80997 10.5831 3.89655 10.5831H5.46161C5.78128 10.5831 6.08764 10.4566 6.32073 10.2302Z"/>
+            </svg>
+            <span class="w-full text-center font-[Mulish]">
+                Заказ сделан
+            </span>
+        </a>
+        <button
+           title="сохранить и вернуться на главную"
+           class="secondary-small-button px-7 mt-5 h-[40px] flex justify-center bg-white rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-(--green) border-2 border-(--green) hover:bg-[#E2F5F6] hover:text-(--green) transition-all ease-linear **:transition-all **:ease-linear">
+            <span class="flex justify-center gap-[4px] items-center">
+                <span>
+                    сохранить и вернуться на главную
+                </span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.1667 7.81706L3.16669 7.81706" stroke="#00A7AA" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                    <path d="M9.13348 3.80083L13.1668 7.81683L9.13348 11.8335" stroke="#00A7AA" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </span>
+        </button>
+    </div>
+</main>
+</body>
+</html>
