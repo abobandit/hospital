@@ -339,7 +339,7 @@
                     </svg>
                 </span>
             </a>
-            <a title="Отправить" class="primary-small-button w-full h-[40px] flex justify-center bg-(--green) rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-white hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#80D3D5] disabled:text-white">
+            <a title="Отправить" class="submit-btn primary-small-button w-full h-[40px] flex justify-center items-center bg-(--green) rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-white hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#80D3D5] disabled:text-white">
                 <span class="flex justify-center gap-[4px] items-center">
                     <span>
                         Отправить
@@ -369,6 +369,22 @@
                 disabledClass: 'border-[#BEBEC2] **:stroke-[#BEBEC2]'
             },
         });
+        const submitBtn = document.querySelector('.submit-btn')
+
+        const submitButton =  async  (event) => {
+            submitBtn.innerHTML = `
+                <div class="flex justify-center">
+                    <svg class="animate-spin  " viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.0002 1.66683C8.35198 1.66683 6.74082 2.15557 5.37041 3.07125C4 3.98693 2.9319 5.28842 2.30117 6.81113C1.67044 8.33385 1.50541 10.0094 1.82695 11.6259C2.14849 13.2424 2.94217 14.7273 4.1076 15.8927C5.27304 17.0582 6.7579 17.8518 8.37441 18.1734C9.99092 18.4949 11.6665 18.3299 13.1892 17.6992C14.7119 17.0684 16.0134 16.0003 16.9291 14.6299C17.8448 13.2595 18.3335 11.6483 18.3335 10.0002" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+
+            `;
+            setTimeout(() =>{
+                console.log(123)
+            }  ,1500)
+        }
+        submitBtn.addEventListener('click',async () => await submitButton(event))
     </script>
 </main>
 </body>

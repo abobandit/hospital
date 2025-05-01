@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./../../styles/style.css">
+    <link rel="stylesheet" href="./../../styles/output.css">
+    <link rel="stylesheet" href="./../../components/checkbox/index.css">
+    <style>
+        .content .info {
+            background-color: white;
+            padding: 23px;
+        }
+        .wrapper {
+            position: relative;
+        }
+        .content .tabs-container {
+            width: 70%;
+            height: 50px;
+            font-family: 'HeliosExt';
+            font-weight: normal;
+        }
+        .content .tab {
+            border-radius: 16px 16px 0 0;
+            position: relative;
+            height: fit-content;
+            padding: 8.5px 21px 10px;
+            font-size: 17px;
+            cursor: pointer;
+        }
+        .tab.active {
+            font-weight: bold;
+            background: #EFFAFB;
+            color: var(--green);
+        }
+        .tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            z-index: 1;
+            background-color: var(--green);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .wrapper::after {
+            content: '';
+            position: absolute;
+            bottom: 6px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: #ddd;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .content .tabcontent {
+            width: 100%;
+            display: flex;
+            padding: 10px;
+            transition: 0.3s;
+        }
+        .content .info .hide {
+            display: none;
+        }
+        .content .info .show {
+            display: flex;
+        }
+        .custom-radio {
+            width: 24px;
+            height: 24px;
+            appearance: none;
+            border: 2px solid #96CFD0;
+            border-radius: 50%;
+            cursor: pointer;
+            outline: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: border-color 0.2s;
+        }
+
+        .custom-radio:checked::before {
+            content: "";
+            width: 12px;
+            height: 12px;
+            background-color: #00A7AA;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body class="h-dvh flex flex-col">
+<header class="relative flex p-[17.5px] justify-center w-full h-[90px] bg-white border-b border-[#E5E5E5]">
+    <div class="text-center">
+        <h1 class="text-[35px] leading-[1.05] text-(--green) font-bold font-[HeliosExt]">НАКФФ</h1>
+        <h3 class="text-[20px] leading-[1.05] text-(--green) font-semibold font-[Mulish]">Медицинская клиника </h3>
+    </div>
+    <a href="/"
+       title="на главную"
+       class="absolute left-[17.5px] top-[50%] transform-[translateY(-50%)] secondary-small-button w-[140px] h-[40px] flex justify-center bg-white rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-(--green) border-2 border-(--green) hover:bg-[#E2F5F6] hover:text-(--green) transition-all ease-linear **:transition-all **:ease-linear">
+        <span class="flex justify-center gap-[4px] items-center">
+            <span>
+                на главную
+            </span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.08993 12.8491V10.8106C5.08993 10.2902 5.51486 9.86837 6.03904 9.86837H7.95515C8.20687 9.86837 8.44828 9.96764 8.62627 10.1443C8.80427 10.321 8.90426 10.5607 8.90426 10.8106V12.8491C8.90267 13.0654 8.98812 13.2734 9.14166 13.4269C9.2952 13.5805 9.50411 13.6668 9.72204 13.6668H11.0293C11.6398 13.6684 12.2259 13.4287 12.6582 13.0007C13.0905 12.5727 13.3334 11.9915 13.3334 11.3854V5.57807C13.3334 5.08847 13.1148 4.62406 12.7365 4.30994L8.28943 0.784075C7.51585 0.165871 6.40749 0.185831 5.65701 0.831482L1.31142 4.30994C0.915242 4.6148 0.67845 5.08059 0.666748 5.57807V11.3795C0.666748 12.6427 1.69834 13.6668 2.97086 13.6668H4.24827C4.7009 13.6668 5.06875 13.3043 5.07203 12.855L5.08993 12.8491Z"
+                      fill="#00A7AA"/>
+            </svg>
+        </span>
+    </a>
+</header>
+<main class="relative w-full h-full bg-[#F0F5F6E5] overflow-auto pt-16 pb-10 px-[140px]">
+    <img class="absolute w-full h-full object-cover inset-0 -z-1" src="../../assets/img/main-banner.png" alt="">
+    <div class="flex items-center justify-center gap-[9px] mb-[44px]">
+        <h2 class="text-center text-[26px] font-[HeliosExt] font-bold">
+            Заказ завтрака на завтра
+        </h2>
+    </div>
+    <div class="content">
+        <div class="container">
+            <div class="info rounded-[20px] outline-3 outline-[#E5E5E5]">
+                <div class="wrapper">
+                    <div class="tabs-container  flex justify-start font-[HeliosExt] ">
+                        <div class="tab active" data-tab="1">
+                        <span class="tab-inner flex items-center justify-center gap-[7px]">Основное
+                            <svg width="16"
+                                 height="16"
+                                 viewBox="0 0 16 16"
+                                 fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <rect width="16" height="16" rx="8" fill="#00A7AA"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M11.8325 5.17568C11.9398 5.2882 12 5.44079 12 5.5999C12 5.759 11.9398 5.91159 11.8325 6.02412L7.25703 10.8243C7.14977 10.9368 7.00433 11 6.85267 11C6.70101 11 6.55556 10.9368 6.44831 10.8243L4.16055 8.42422C4.05637 8.31105 3.99872 8.15948 4.00002 8.00216C4.00132 7.84483 4.06147 7.69434 4.16752 7.58309C4.27356 7.47184 4.41701 7.40874 4.56697 7.40737C4.71693 7.406 4.8614 7.46648 4.96927 7.57578L6.85267 9.55167L11.0238 5.17568C11.1311 5.06319 11.2765 5 11.4282 5C11.5798 5 11.7253 5.06319 11.8325 5.17568Z"
+                                      fill="#EFFAFB"/>
+                            </svg>
+                    </span>
+                        </div>
+                        <div class="tab" data-tab="2">
+                        <span class="tab-inner flex items-center justify-center gap-[7px]">Напиток
+                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <rect width="10" height="10" rx="5" fill="#EFFAFB"/>
+                            </svg>
+                        </span>
+                        </div>
+                        <div class="tab" data-tab="3">
+                        <span class="tab-inner flex items-center justify-center gap-[7px]">Дополнительно
+                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <rect width="10" height="10" rx="5" fill="#EFFAFB"/>
+                            </svg>
+                        </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper-tabcontent font-[Mulish]">
+                    <form   class="tabcontent" data-tab="1">
+                        <div class="tabcontent-header text-[18px] mb-[30px]">
+                            Можно выбрать только одно блюдо
+                        </div>
+                        <div class="swiper-slide h-fit! mb-[30px] ">
+                            <label class="checkbox w-fit leading-[1] flex gap-2 items-center select-none relative cursor-pointer">
+                                <input class="hidden" type="checkbox">
+                                <div class="checkmark flex items-center justify-center relative w-[24px] h-[24px] rounded-[3px] border border-(--pale-green)">
+                                    <svg
+                                            width="18"
+                                            height="12"
+                                            viewBox="0 0 18 12"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                                d="M1 5.5L6.5 11L17 1"
+                                                stroke="#00A7AA"
+                                                stroke-width="2"
+                                                fill="none"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                </div>
+                                <span class="text-[17px] font-medium font-[Mulish]">
+                            Нужно перемолотое
+                        </span>
+                            </label>
+                        </div>
+                        <div class="radio-buttons grid grid-cols-2 mb-[44px]">
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input required type="radio" name="option" class="custom-radio">
+                                <span>Выбор</span>
+                            </label>
+
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="radio" name="option" class="custom-radio">
+                                <span>Выбор</span>
+                            </label>
+                        </div>
+
+
+
+                    </form>
+                    <div class="tabcontent" data-tab="2">
+                        <div class="description">
+                            Контент второй вкладки..
+                        </div>
+                    </div>
+                    <div class="tabcontent" data-tab="3">
+                        <div class="description">
+                            Контент третьей вкладки..
+                        </div>
+                    </div>
+                    <div class="flex justify-end gap-2">
+                        <button class="secondary small-button px-[22px] w-max py-[10.25px] bg-white rounded-[40px] font-[HeliosExt] font-bold text-[13px]  text-(--green) outline-2 outline-(--green) hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#E2F5F6] disabled:text-[#80D3D5]) disabled:outline-0">
+                            <span class="flex items-center justify-center gap-2">
+                                отменить
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 1L1 9" stroke="#00A7AA" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                    <path d="M9 9L1 1" stroke="#00A7AA" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+
+                        </button>
+                        <button class="submit-btn primary small-button  px-[22px] w-max py-[10.25px] bg-(--green) rounded-[40px] font-[HeliosExt] font-bold text-[13px]  text-white hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#80D3D5] disabled:text-white">
+                                <span class="flex items-center justify-center gap-2">
+                                    заказать и вернуться в меню
+                                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.6665 7.81706L3.6665 7.81706" stroke="currentColor" stroke-width="2"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"/>
+                                        <path d="M9.6333 3.80083L13.6666 7.81683L9.6333 11.8335" stroke="currentColor"
+                                              stroke-width="2"
+                                              stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        const tabsContainer = document.querySelector('.tabs-container');
+        const tabContents = document.querySelectorAll('.tabcontent');
+        const submitBtn = document.querySelector('.submit-btn')
+        // SVG для активного и неактивного таба
+        const activeSVG = `
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="16" height="16" rx="8" fill="#00A7AA"/>
+  <path fill-rule="evenodd" clip-rule="evenodd"
+    d="M11.8325 5.17568C11.9398 5.2882 12 5.44079 12 5.5999C12 5.759 11.9398 5.91159 11.8325 6.02412L7.25703 10.8243C7.14977 10.9368 7.00433 11 6.85267 11C6.70101 11 6.55556 10.9368 6.44831 10.8243L4.16055 8.42422C4.05637 8.31105 3.99872 8.15948 4.00002 8.00216C4.00132 7.84483 4.06147 7.69434 4.16752 7.58309C4.27356 7.47184 4.41701 7.40874 4.56697 7.40737C4.71693 7.406 4.8614 7.46648 4.96927 7.57578L6.85267 9.55167L11.0238 5.17568C11.1311 5.06319 11.2765 5 11.4282 5C11.5798 5 11.7253 5.06319 11.8325 5.17568Z"
+    fill="#EFFAFB"/>
+</svg>
+`;
+
+        const inactiveSVG = `
+<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="10" height="10" rx="5" fill="#EFFAFB"/>
+</svg>
+`;
+
+        // Функция для обновления иконок
+        function updateTabIcons() {
+            document.querySelectorAll('.tab').forEach((tab, index) => {
+                const span = tab.querySelector('.tab-inner');
+                const text = span.textContent.trim(); // сохраняем текст без SVG
+                span.innerHTML = `${text} ${tab.classList.contains('active') ? activeSVG : inactiveSVG}`;
+            });
+        }
+
+        tabsContainer.addEventListener('click', (event) => {
+            const clickedTab = event.target.closest('.tab');
+
+            if (clickedTab && tabsContainer.contains(clickedTab)) {
+                document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+                tabContents.forEach(content => content.style.display = 'none');
+
+                clickedTab.classList.add('active');
+
+                const index = Array.from(tabsContainer.children).indexOf(clickedTab);
+
+                if (tabContents[index]) {
+                    tabContents[index].style.display = 'block';
+                }
+
+                // Обновляем иконки
+                updateTabIcons();
+            }
+        });
+
+        const submitButton =  async  (event) => {
+            submitBtn.innerHTML = `
+                <div class="flex justify-center">
+                    <svg class="animate-spin  " viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.0002 1.66683C8.35198 1.66683 6.74082 2.15557 5.37041 3.07125C4 3.98693 2.9319 5.28842 2.30117 6.81113C1.67044 8.33385 1.50541 10.0094 1.82695 11.6259C2.14849 13.2424 2.94217 14.7273 4.1076 15.8927C5.27304 17.0582 6.7579 17.8518 8.37441 18.1734C9.99092 18.4949 11.6665 18.3299 13.1892 17.6992C14.7119 17.0684 16.0134 16.0003 16.9291 14.6299C17.8448 13.2595 18.3335 11.6483 18.3335 10.0002" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+
+            `;
+            setTimeout(() =>{
+                console.log(123)
+            }  ,1500)
+        }
+        submitBtn.addEventListener('click',async () => await submitButton(event))
+        function initTabs() {
+            const firstTab = document.querySelector('.tab');
+            if (firstTab) {
+                firstTab.classList.add('active');
+                tabContents.forEach((content, idx) => {
+                    content.style.display = idx === 0 ? 'block' : 'none';
+                });
+                updateTabIcons();
+            }
+        }
+
+        initTabs();
+
+    </script>
+</main>
+</body>
+</html>
