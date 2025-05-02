@@ -14,7 +14,7 @@
         <h1 class="text-[35px] leading-[1.05] text-(--green) font-bold font-[HeliosExt]">НАКФФ</h1>
         <h3 class="text-[20px] leading-[1.05] text-(--green) font-semibold font-[Mulish]">Медицинская клиника </h3>
     </div>
-    <a href="/"
+    <a href="../main/index.html"
        title="на главную"
        class="absolute left-[17.5px] top-[50%] transform-[translateY(-50%)] secondary-small-button w-[140px] h-[40px] flex justify-center bg-white rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-(--green) border-2 border-(--green) hover:bg-[#E2F5F6] hover:text-(--green) transition-all ease-linear **:transition-all **:ease-linear">
         <div class="flex justify-center gap-[4px] items-center">
@@ -309,13 +309,13 @@
                 </div>
             </div>
             <div class="absolute z-10 top-0 right-0 h-full flex flex-col justify-between">
-                <div class="swiper-button-prev cursor-pointer p-[10px] rounded-full border-2 border-(--black)">
+                <div class="swiper-button-prev w-[45px] flex justify-center items-center aspect-square cursor-pointer p-[10px] rounded-full border-2 border-(--black)">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7.81718 2.8335L7.81718 12.8335" stroke="#1B1B26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M3.80089 6.8667L7.81689 2.83337L11.8336 6.8667" stroke="#1B1B26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
-                <div class="swiper-button-next cursor-pointer p-[10px] rounded-full border-2 border-(--black)">
+                <div class="swiper-button-next w-[45px] flex justify-center items-center aspect-square cursor-pointer p-[10px] rounded-full border-2 border-(--black)">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8.18282 13.1665L8.18282 3.1665" stroke="#1B1B26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M12.1991 9.1333L8.18311 13.1666L4.16644 9.1333" stroke="#1B1B26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -351,7 +351,6 @@
                               stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                 </span>
-
             </a>
         </div>
     </div>
@@ -371,7 +370,7 @@
         });
         const submitBtn = document.querySelector('.submit-btn')
 
-        const submitButton =  async  (event) => {
+        const submitButton = (event) => {
             submitBtn.innerHTML = `
                 <div class="flex justify-center">
                     <svg class="animate-spin  " viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -382,9 +381,12 @@
             `;
             setTimeout(() =>{
                 console.log(123)
-            }  ,1500)
+                location.reload();
+            },1500)
         }
-        submitBtn.addEventListener('click',async () => await submitButton(event))
+        submitBtn.addEventListener('click', () => {
+            submitButton(event)
+        })
     </script>
 </main>
 </body>
