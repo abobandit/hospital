@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./../../styles/style.css">
+    <link rel="stylesheet" href="./../../styles/output.css">
+    <link rel="stylesheet" href="./../../components/inputs/index.css">
+</head>
+<body class="h-dvh flex flex-col">
+<header class="relative flex p-[17.5px] justify-center w-full h-[90px] bg-white border-b border-[#E5E5E5]">
+    <div class="text-center">
+        <h1 class="text-[35px] leading-[1.05] text-(--green) font-bold font-[HeliosExt]">НАКФФ</h1>
+        <h3 class="text-[20px] leading-[1.05] text-(--green) font-semibold font-[Mulish]">Медицинская клиника </h3>
+    </div>
+    <a href="./../main/index.html"
+       title="на главную"
+       class="absolute left-[17.5px] top-[50%] transform-[translateY(-50%)] secondary-small-button w-[140px] h-[40px] flex justify-center bg-white rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-(--green) border-2 border-(--green) hover:bg-[#E2F5F6] hover:text-(--green) transition-all ease-linear **:transition-all **:ease-linear">
+        <span class="flex justify-center gap-[4px] items-center">
+            <span>
+                на главную
+            </span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.08993 12.8491V10.8106C5.08993 10.2902 5.51486 9.86837 6.03904 9.86837H7.95515C8.20687 9.86837 8.44828 9.96764 8.62627 10.1443C8.80427 10.321 8.90426 10.5607 8.90426 10.8106V12.8491C8.90267 13.0654 8.98812 13.2734 9.14166 13.4269C9.2952 13.5805 9.50411 13.6668 9.72204 13.6668H11.0293C11.6398 13.6684 12.2259 13.4287 12.6582 13.0007C13.0905 12.5727 13.3334 11.9915 13.3334 11.3854V5.57807C13.3334 5.08847 13.1148 4.62406 12.7365 4.30994L8.28943 0.784075C7.51585 0.165871 6.40749 0.185831 5.65701 0.831482L1.31142 4.30994C0.915242 4.6148 0.67845 5.08059 0.666748 5.57807V11.3795C0.666748 12.6427 1.69834 13.6668 2.97086 13.6668H4.24827C4.7009 13.6668 5.06875 13.3043 5.07203 12.855L5.08993 12.8491Z"
+                      fill="#00A7AA"/>
+            </svg>
+        </span>
+    </a>
+</header>
+<main class="relative w-full h-full bg-[#F0F5F6E5] overflow-auto pt-16 pb-10 px-[140px]">
+    <img class="absolute w-full h-full inset-0 -z-1" src="../../assets/img/main-banner.png" alt="">
+    <div class="flex items-center justify-center gap-[9px]">
+        <svg width="16" height="17" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.08993 12.8491V10.8106C5.08993 10.2902 5.51486 9.86837 6.03904 9.86837H7.95515C8.20687 9.86837 8.44828 9.96764 8.62627 10.1443C8.80427 10.321 8.90426 10.5607 8.90426 10.8106V12.8491C8.90267 13.0654 8.98812 13.2734 9.14166 13.4269C9.2952 13.5805 9.50411 13.6668 9.72204 13.6668H11.0293C11.6398 13.6684 12.2259 13.4287 12.6582 13.0007C13.0905 12.5727 13.3334 11.9915 13.3334 11.3854V5.57807C13.3334 5.08847 13.1148 4.62406 12.7365 4.30994L8.28943 0.784075C7.51585 0.165871 6.40749 0.185831 5.65701 0.831482L1.31142 4.30994C0.915242 4.6148 0.67845 5.08059 0.666748 5.57807V11.3795C0.666748 12.6427 1.69834 13.6668 2.97086 13.6668H4.24827C4.7009 13.6668 5.06875 13.3043 5.07203 12.855L5.08993 12.8491Z"
+                  fill="#222D37"/>
+        </svg>
+
+        <h2 class="text-center text-[26px] font-[HeliosExt] font-bold">
+            Главная
+        </h2>
+    </div>
+    <div class="max-w-[438px] mx-auto">
+        <p class="text-[18px] leading-[24px] mt-4 font-[Mulish] font-semibold">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.
+        </p>
+        <div class="flex flex-col gap-[13px] mt-8">
+            <div data-f-item class="suggest">
+                <div class="relative">
+                    <input
+                            placeholder="Ваше имя"
+                            data-f-field
+                            class="
+                        px-[24px]
+                        py-4
+                        w-full
+                        text-[17px]
+                        text-(--black)
+                        placeholder:text-(--black)
+                        leading-none
+                        border-[1.5px]
+                        rounded-2xl
+                        bg-white
+                "/>
+                    <button data-f-clear class="absolute top-[50%] right-[14px] transform-[translateY(-50%)]">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 6L18.7742 18.7742" stroke="#D6D6D6" stroke-width="2" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                            <path d="M6 18.7744L18.7742 6.00022" stroke="#D6D6D6" stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="pl-[24px] mt-2 text-base text-(--error-dark)" data-f-error>
+                    Uh oh! There was an error!
+                </div>
+                <div
+                        data-f-success
+                        class="
+                        pl-[24px]
+                        mt-2
+                        text-base
+                        text-(--green)"
+                >
+                    Success message!
+                </div>
+                <div class="pl-[24px] mt-2 text-base text-(--grey)" data-f-suggest>
+                    Не обязательно для заполнения
+                </div>
+            </div>
+            <div data-f-item class="suggest">
+                <div class="relative">
+                    <input
+                            placeholder="Ваша палата и койка"
+                            data-f-field
+                            class="
+                        px-[24px]
+                        py-4
+                        w-full
+                        text-[17px]
+                        text-(--black)
+                        placeholder:text-(--black)
+                        leading-none
+                        border-[1.5px]
+                        rounded-2xl
+                        bg-white
+                "/>
+                    <button data-f-clear class="absolute top-[50%] right-[14px] transform-[translateY(-50%)]">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 6L18.7742 18.7742" stroke="#D6D6D6" stroke-width="2" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                            <path d="M6 18.7744L18.7742 6.00022" stroke="#D6D6D6" stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="pl-[24px] mt-2 text-base text-(--error-dark)" data-f-error>
+                    Uh oh! There was an error!
+                </div>
+                <div
+                        data-f-success
+                        class="
+                        pl-[24px]
+                        mt-2
+                        text-base
+                        text-(--green)"
+                >
+                    Success message!
+                </div>
+                <div class="pl-[24px] mt-2 text-base text-(--grey)" data-f-suggest>
+                    Не обязательно для заполнения
+                </div>
+            </div>
+            <div class="flex gap-[10px]">
+                <button title="Отправить" class="submit-btn primary-small-button px-6 h-[40px] flex justify-center items-center bg-(--green) rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-white hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#80D3D5] disabled:text-white">
+                    <span class="flex justify-center gap-[4px] items-center">
+                        <span>
+                            Отправить
+                        </span>
+                        <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.6665 7.81706L3.6665 7.81706" stroke="currentColor" stroke-width="2"
+                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M9.6333 3.80083L13.6666 7.81683L9.6333 11.8335" stroke="currentColor" stroke-width="2"
+                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </span>
+                </button>
+                <a href="./../main/index.html"
+                   title="Отменить"
+                   class="secondary-small-button px-6 h-[40px] flex justify-center bg-white rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-(--green) border-2 border-(--green) hover:bg-[#E2F5F6] hover:text-(--green) transition-all ease-linear **:transition-all **:ease-linear">
+                    <span class="flex justify-center gap-[4px] items-center">
+                        <span>
+                            отменить
+                        </span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 6L18.7742 18.7742" stroke="#00A7AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6 18.7744L18.7742 6.00022" stroke="#00A7AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script defer src="./../../components/inputs/index.js"></script>
+</main>
+</body>
+</html>
