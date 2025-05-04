@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./../../styles/style.css">
     <link rel="stylesheet" href="./../../styles/output.css">
     <link rel="stylesheet" href="./../../components/checkbox/index.css">
+    <link rel="stylesheet" href="./../../components/swiper/swiper.min.css">
     <style>
         .content .info {
             background-color: white;
@@ -79,9 +80,8 @@
             align-items: center;
             transition: border-color 0.2s;
         }
-
         .custom-radio:checked::before {
-            content: "";
+            content: '';
             width: 12px;
             height: 12px;
             background-color: #00A7AA;
@@ -116,8 +116,8 @@
             Заказ завтрака на завтра
         </h2>
     </div>
-    <div class="content">
-        <div class="container">
+    <div class="content ">
+        <div class="container mx-auto w-[52em]">
             <div class="info rounded-[20px] outline-3 outline-[#E5E5E5]">
                 <div class="wrapper">
                     <div class="tabs-container  flex justify-start font-[HeliosExt] ">
@@ -154,63 +154,124 @@
                     </div>
                 </div>
                 <div class="wrapper-tabcontent font-[Mulish]">
-                    <form   class="tabcontent" data-tab="1">
-                        <div class="tabcontent-header text-[18px] mb-[30px]">
-                            Можно выбрать только одно блюдо
-                        </div>
-                        <div class="swiper-slide h-fit! mb-[30px] ">
-                            <label class="checkbox w-fit leading-[1] flex gap-2 items-center select-none relative cursor-pointer">
-                                <input class="hidden" type="checkbox">
-                                <div class="checkmark flex items-center justify-center relative w-[24px] h-[24px] rounded-[3px] border border-(--pale-green)">
-                                    <svg
-                                            width="18"
-                                            height="12"
-                                            viewBox="0 0 18 12"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                                d="M1 5.5L6.5 11L17 1"
-                                                stroke="#00A7AA"
-                                                stroke-width="2"
-                                                fill="none"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                        />
-                                    </svg>
+                    <div class="swiper  max-h-[355px]  mt-6 mb-[24px]">
+                        <div class="swiper-wrapper">
+                            <form class="tabcontent swiper-slide h-fit!" data-tab="1">
+                                <div class="tabcontent-header text-[18px] mb-[30px]">
+                                    Можно выбрать только одно блюдо
                                 </div>
-                                <span class="text-[17px] font-medium font-[Mulish]">
+                                <div class="swiper-slide h-fit! mb-[30px] ">
+                                    <label class="checkbox w-fit leading-[1] flex gap-2 items-center select-none relative cursor-pointer">
+                                        <input class="hidden" type="checkbox">
+                                        <div class="checkmark flex items-center justify-center relative w-[24px] h-[24px] rounded-[3px] border border-(--pale-green)">
+                                            <svg
+                                                    width="18"
+                                                    height="12"
+                                                    viewBox="0 0 18 12"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                        d="M1 5.5L6.5 11L17 1"
+                                                        stroke="#00A7AA"
+                                                        stroke-width="2"
+                                                        fill="none"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                        <span class="text-[17px] font-medium font-[Mulish]">
                             Нужно перемолотое
                         </span>
-                            </label>
+                                    </label>
+                                </div>
+                                <div class="radio-buttons grid grid-cols-2 mb-[44px]">
+
+                                    <label class="flex items-center gap-2 cursor-pointer relative ">
+                                        <div class="flex gap-4  top-2 absolute left-2  z-10">
+                                            <input type="radio" name="option" class="custom-radio">
+                                            <span >Выбор</span>
+
+                                        </div>
+                                        <img class="h-[208px] rounded-[10px] w-[349px]"
+                                             src="./../../assets/img/Simply-Recipes.jpg" alt="">
+                                    </label>
+                                    <label class="flex items-center gap-2 cursor-pointer relative ">
+                                        <div class="flex gap-4  top-2 absolute left-2  z-10">
+                                            <input type="radio" name="option" class="custom-radio">
+                                            <span >Выбор</span>
+
+                                        </div>
+                                        <img class="h-[208px] rounded-[10px]  w-[349px] "
+                                             src="./../../assets/img/Simply-Recipes.jpg" alt="">
+                                    </label>
+                                </div>
+                                <div class="radio-buttons grid grid-cols-2 mb-[44px]">
+
+                                    <label class="flex items-center gap-2 cursor-pointer relative ">
+                                        <div class="flex gap-4  top-2 absolute left-2  z-10">
+                                            <input type="radio" name="option" class="custom-radio">
+                                            <span >Выбор</span>
+
+                                        </div>
+                                        <img class="h-[208px] rounded-[10px] w-[349px]"
+                                             src="./../../assets/img/Simply-Recipes.jpg" alt="">
+                                    </label>
+                                    <label class="flex items-center gap-2 cursor-pointer relative ">
+                                        <div class="flex gap-4  top-2 absolute left-2  z-10">
+                                            <input type="radio" name="option" class="custom-radio">
+                                            <span >Выбор</span>
+
+                                        </div>
+                                        <img class="h-[208px] rounded-[10px]  w-[349px] "
+                                             src="./../../assets/img/Simply-Recipes.jpg" alt="">
+                                    </label>
+                                </div>
+                            </form>
+
+                            <div class="tabcontent swiper-slide h-fit!" data-tab="2">
+                                <div class="description">
+                                    Контент второй вкладки..
+                                </div>
+                            </div>
+                            <div class="tabcontent swiper-slide h-fit!" data-tab="3">
+                                <div class="description">
+                                    Контент третьей вкладки..
+                                </div>
+                            </div>
+
+
+
                         </div>
-                        <div class="radio-buttons grid grid-cols-2 mb-[44px]">
-                            <label class="flex items-center gap-2 cursor-pointer">
-                                <input required type="radio" name="option" class="custom-radio">
-                                <span>Выбор</span>
-                            </label>
 
-                            <label class="flex items-center gap-2 cursor-pointer">
-                                <input type="radio" name="option" class="custom-radio">
-                                <span>Выбор</span>
-                            </label>
+                        <div class="absolute z-10 top-0 right-0 h-full flex flex-col justify-between">
+                            <div class="swiper-button-prev w-[45px] flex justify-center items-center aspect-square cursor-pointer p-[10px] rounded-full border-2 border-(--black)">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.81718 2.8335L7.81718 12.8335" stroke="#1B1B26"
+                                          stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M3.80089 6.8667L7.81689 2.83337L11.8336 6.8667" stroke="#1B1B26"
+                                          stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="swiper-button-next w-[45px] flex justify-center items-center aspect-square cursor-pointer p-[10px] rounded-full border-2 border-(--black)">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.18282 13.1665L8.18282 3.1665" stroke="#1B1B26"
+                                          stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12.1991 9.1333L8.18311 13.1666L4.16644 9.1333" stroke="#1B1B26"
+                                          stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
                         </div>
 
-
-
-                    </form>
-                    <div class="tabcontent" data-tab="2">
-                        <div class="description">
-                            Контент второй вкладки..
-                        </div>
                     </div>
-                    <div class="tabcontent" data-tab="3">
-                        <div class="description">
-                            Контент третьей вкладки..
-                        </div>
-                    </div>
-                    <div class="flex justify-end gap-2">
-                        <button class="secondary small-button px-[22px] w-max py-[10.25px] bg-white rounded-[40px] font-[HeliosExt] font-bold text-[13px]  text-(--green) outline-2 outline-(--green) hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#E2F5F6] disabled:text-[#80D3D5]) disabled:outline-0">
+                    <div class="swiper-slide h-fit!">
+                        <div class="flex justify-end gap-2">
+                            <button class="secondary small-button px-[22px] w-max py-[10.25px] bg-white rounded-[40px] font-[HeliosExt] font-bold text-[13px]  text-(--green) outline-2 outline-(--green) hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#E2F5F6] disabled:text-[#80D3D5]) disabled:outline-0">
                             <span class="flex items-center justify-center gap-2">
                                 отменить
                                 <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
@@ -222,8 +283,8 @@
                                 </svg>
                             </span>
 
-                        </button>
-                        <button class="submit-btn primary small-button  px-[22px] w-max py-[10.25px] bg-(--green) rounded-[40px] font-[HeliosExt] font-bold text-[13px]  text-white hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#80D3D5] disabled:text-white">
+                            </button>
+                            <button class="submit-btn primary small-button  px-[22px] w-max py-[10.25px] bg-(--green) rounded-[40px] font-[HeliosExt] font-bold text-[13px]  text-white hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#80D3D5] disabled:text-white">
                                 <span class="flex items-center justify-center gap-2">
                                     заказать и вернуться в меню
                                     <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
@@ -236,15 +297,26 @@
                                               stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                 </span>
-                        </button>
+                            </button>
+                        </div>
                     </div>
-
                 </div>
-
             </div>
         </div>
     </div>
+    <script src="./../../components/swiper/swiper-bundle.min.js"></script>
+
     <script>
+        const swiper = new Swiper('.swiper', {
+            direction: 'vertical',
+            spaceBetween: 16,
+            slidesPerView: 'auto',
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+                disabledClass: 'border-[#BEBEC2] **:stroke-[#BEBEC2]'
+            },
+        });
         const tabsContainer = document.querySelector('.tabs-container');
         const tabContents = document.querySelectorAll('.tabcontent');
         const submitBtn = document.querySelector('.submit-btn')
@@ -293,7 +365,7 @@
             }
         });
 
-        const submitButton =  async  (event) => {
+        const submitButton = async (event) => {
             submitBtn.innerHTML = `
                 <div class="flex justify-center">
                     <svg class="animate-spin  " viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -302,11 +374,12 @@
                 </div>
 
             `;
-            setTimeout(() =>{
+            setTimeout(() => {
                 console.log(123)
-            }  ,1500)
+            }, 1500)
         }
-        submitBtn.addEventListener('click',async () => await submitButton(event))
+        submitBtn.addEventListener('click', async () => await submitButton(event))
+
         function initTabs() {
             const firstTab = document.querySelector('.tab');
             if (firstTab) {
