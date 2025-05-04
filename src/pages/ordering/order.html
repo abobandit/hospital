@@ -8,27 +8,6 @@
     <link rel="stylesheet" href="./../../components/checkbox/index.css">
     <link rel="stylesheet" href="./../../components/swiper/swiper.min.css">
     <style>
-        .content .info {
-            background-color: white;
-            padding: 23px;
-        }
-        .wrapper {
-            position: relative;
-        }
-        .content .tabs-container {
-            width: 70%;
-            height: 50px;
-            font-family: 'HeliosExt';
-            font-weight: normal;
-        }
-        .content .tab {
-            border-radius: 16px 16px 0 0;
-            position: relative;
-            height: fit-content;
-            padding: 8.5px 21px 10px;
-            font-size: 17px;
-            cursor: pointer;
-        }
         .tab.active {
             font-weight: bold;
             background: #EFFAFB;
@@ -45,40 +24,11 @@
             background-color: var(--green);
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
-        .wrapper::after {
-            content: '';
-            position: absolute;
-            bottom: 6px;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background-color: #ddd;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-        .content .tabcontent {
-            width: 100%;
-            display: flex;
-            padding: 10px;
-            transition: 0.3s;
-        }
         .content .info .hide {
             display: none;
         }
         .content .info .show {
             display: flex;
-        }
-        .custom-radio {
-            width: 24px;
-            height: 24px;
-            appearance: none;
-            border: 2px solid #96CFD0;
-            border-radius: 50%;
-            cursor: pointer;
-            outline: none;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: border-color 0.2s;
         }
         .custom-radio:checked::before {
             content: '';
@@ -118,10 +68,10 @@
     </div>
     <div class="content ">
         <div class="container mx-auto max-w-[822px]">
-            <div class="info rounded-[20px] outline-3 outline-[#E5E5E5]">
-                <div class="wrapper">
-                    <div class="tabs-container  flex justify-start font-[HeliosExt] ">
-                        <div class="tab active" data-tab="1">
+            <div class="info  bg-white p-[23px] rounded-[20px] outline-3 outline-[#E5E5E5]">
+                <div class="wrapper relative after:content-[''] after:absolute after:bottom-[6px] after:left-0 after:w-full after:h-[3px] after:bg-[#ddd] after:transition-colors after:duration-300  after:ease-initial after:transition-transform">
+                    <div class="tabs-container w-[70%] h-[50px] font-[HeliosExt] font-normal flex justify-start font-[HeliosExt] ">
+                        <div class="tab rounded-t-[16px] relative h-fit pt-[8.5px] px-[21px] pb-[10px] text-[17px] cursor-pointer ">
                         <span class="tab-inner flex items-center justify-center gap-[7px]">Основное
                             <svg width="16"
                                  height="16"
@@ -135,7 +85,7 @@
                             </svg>
                     </span>
                         </div>
-                        <div class="tab" data-tab="2">
+                        <div class="tab rounded-t-[16px] relative h-fit pt-[8.5px] px-[21px] pb-[10px] text-[17px] cursor-pointer ">
                         <span class="tab-inner flex items-center justify-center gap-[7px]">Напиток
                             <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
@@ -143,7 +93,7 @@
                             </svg>
                         </span>
                         </div>
-                        <div class="tab" data-tab="3">
+                        <div class="tab rounded-t-[16px] relative h-fit pt-[8.5px] px-[21px] pb-[10px] text-[17px] cursor-pointer ">
                         <span class="tab-inner flex items-center justify-center gap-[7px]">Дополнительно
                             <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
@@ -154,7 +104,114 @@
                     </div>
                 </div>
                 <div class="wrapper-tabcontent font-[Mulish]">
-                    <div class="tabcontent">
+                    <div data-tab="1" class="tabcontent  w-full flex p-[10px] transition duration-300">
+                        <div class="tabcontent-header text-[18px] mb-[30px]">
+                            Можно выбрать только одно блюдо
+                        </div>
+                        <div class="swiper max-h-[355px] mt-6 mb-[24px]">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide h-[208px]">
+                                    <label class="checkbox w-fit leading-[1] flex gap-2 items-center select-none relative cursor-pointer">
+                                        <input class="hidden" type="checkbox">
+                                        <div class="checkmark flex items-center justify-center relative w-[24px] h-[24px] rounded-[3px] border border-(--pale-green)">
+                                            <svg
+                                                    width="18"
+                                                    height="12"
+                                                    viewBox="0 0 18 12"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                        d="M1 5.5L6.5 11L17 1"
+                                                        stroke="#00A7AA"
+                                                        stroke-width="2"
+                                                        fill="none"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                        <span class="text-[17px] font-medium font-[Mulish]">
+                                        Нужно перемолотое
+                                    </span>
+                                    </label>
+                                </div>
+                                <div class="swiper-slide h-[208px]">
+                                    <div class="radio-buttons grid grid-cols-2 gap-[15px]">
+                                        <label class="flex items-center gap-1 cursor-pointer relative ">
+                                            <div class="flex gap-4  top-2  left-2  z-10">
+                                                <input type="radio" name="option"
+                                                       class=" custom-radio w-[24px] h-[24px] appearance-none border-2 border-solid border-[#96CFD0] rounded-[50%] cursor-pointer outline-none flex justify-center items-center transition-colors duration-200">
+                                                <span>Выбор</span>
+
+                                            </div>
+<!--                                            <img class="rounded-[10px]   h-[208px] w-[349px]"-->
+<!--                                                 src="./../../assets/img/Simply-Recipes.jpg" alt="">-->
+                                        </label>
+                                        <label class="flex items-center gap-1 cursor-pointer relative ">
+                                            <div class="flex gap-4  top-2  left-2  z-10">
+                                                <input type="radio" name="option"
+                                                       class=" custom-radio w-[24px] h-[24px] appearance-none border-2 border-solid border-[#96CFD0] rounded-[50%] cursor-pointer outline-none flex justify-center items-center transition-colors duration-200">
+                                                <span>Выбор</span>
+
+                                            </div>
+<!--                                            <img class="rounded-[10px]   h-[208px] w-[349px] "-->
+<!--                                                 src="./../../assets/img/Simply-Recipes.jpg" alt="">-->
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="h-[208px] swiper-slide">
+                                    <div class="radio-buttons grid grid-cols-2 gap-[15px]">
+                                        <label class="flex items-center gap-1 cursor-pointer relative ">
+                                            <div class="flex gap-4  top-2  left-2  z-10">
+                                                <input type="radio" name="option"
+                                                       class=" custom-radio w-[24px] h-[24px] appearance-none border-2 border-solid border-[#96CFD0] rounded-[50%] cursor-pointer outline-none flex justify-center items-center transition-colors duration-200">
+                                                <span>Выбор</span>
+
+                                            </div>
+<!--                                            <img class="rounded-[10px]   h-[208px] w-[349px]"-->
+<!--                                                 src="./../../assets/img/Simply-Recipes.jpg" alt="">-->
+                                        </label>
+                                        <label class="flex items-center gap-1 cursor-pointer relative ">
+                                            <div class="flex gap-4  top-2  left-2  z-10">
+                                                <input type="radio" name="option"
+                                                       class=" custom-radio w-[24px] h-[24px] appearance-none border-2 border-solid border-[#96CFD0] rounded-[50%] cursor-pointer outline-none flex justify-center items-center transition-colors duration-200">
+                                                <span>Выбор</span>
+
+                                            </div>
+<!--                                            <img class="rounded-[10px]   h-[208px] w-[349px] "-->
+<!--                                                 src="./../../assets/img/Simply-Recipes.jpg" alt="">-->
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="absolute z-10 top-0 right-0 h-full flex flex-col justify-between">
+                                <div class="swiper-button-prev w-[36px] h-[36px] flex justify-center items-center aspect-square cursor-pointer p-[10px] rounded-full border-2 border-(--black)">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.81718 2.8335L7.81718 12.8335" stroke="#1B1B26"
+                                              stroke-width="1.5"
+                                              stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M3.80089 6.8667L7.81689 2.83337L11.8336 6.8667" stroke="#1B1B26"
+                                              stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <div class="swiper-button-next w-[36px] h-[36px] flex justify-center items-center aspect-square cursor-pointer p-[10px] rounded-full border-2 border-(--black)">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.18282 13.1665L8.18282 3.1665" stroke="#1B1B26"
+                                              stroke-width="1.5"
+                                              stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12.1991 9.1333L8.18311 13.1666L4.16644 9.1333" stroke="#1B1B26"
+                                              stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-tab="2" class="tabcontent  w-full flex p-[10px] transition duration-300">
                         <div class="tabcontent-header text-[18px] mb-[30px]">
                             Можно выбрать только одно блюдо
                         </div>
@@ -188,22 +245,24 @@
                                 </div>
                                 <div class="swiper-slide h-[208px]">
                                     <div class="radio-buttons flex gap-[15px]">
-                                        <label class="flex items-center gap-2 cursor-pointer relative ">
+                                        <label class="flex items-center gap-1 cursor-pointer relative ">
                                             <div class="flex gap-4  top-2 absolute left-2  z-10">
-                                                <input type="radio" name="option" class="custom-radio">
-                                                <span >Выбор</span>
+                                                <input type="radio" name="option"
+                                                       class=" custom-radio w-[24px] h-[24px] appearance-none border-2 border-solid border-[#96CFD0] rounded-[50%] cursor-pointer outline-none flex justify-center items-center transition-colors duration-200">
+                                                <span>Выбор</span>
 
                                             </div>
-                                            <img class="rounded-[10px] w-[349px]"
+                                            <img class="rounded-[10px]   h-[208px] w-[349px]"
                                                  src="./../../assets/img/Simply-Recipes.jpg" alt="">
                                         </label>
-                                        <label class="flex items-center gap-2 cursor-pointer relative ">
+                                        <label class="flex items-center gap-1 cursor-pointer relative ">
                                             <div class="flex gap-4  top-2 absolute left-2  z-10">
-                                                <input type="radio" name="option" class="custom-radio">
-                                                <span >Выбор</span>
+                                                <input type="radio" name="option"
+                                                       class=" custom-radio w-[24px] h-[24px] appearance-none border-2 border-solid border-[#96CFD0] rounded-[50%] cursor-pointer outline-none flex justify-center items-center transition-colors duration-200">
+                                                <span>Выбор</span>
 
                                             </div>
-                                            <img class="rounded-[10px]  w-[349px] "
+                                            <img class="rounded-[10px]   h-[208px] w-[349px] "
                                                  src="./../../assets/img/Simply-Recipes.jpg" alt="">
                                         </label>
                                     </div>
@@ -211,41 +270,33 @@
 
                                 <div class="h-[208px] swiper-slide">
                                     <div class="radio-buttons flex gap-[15px]">
-                                        <label class="flex items-center gap-2 cursor-pointer relative ">
+                                        <label class="flex items-center gap-1 cursor-pointer relative ">
                                             <div class="flex gap-4  top-2 absolute left-2  z-10">
-                                                <input type="radio" name="option" class="custom-radio">
-                                                <span >Выбор</span>
+                                                <input type="radio" name="option"
+                                                       class=" custom-radio w-[24px] h-[24px] appearance-none border-2 border-solid border-[#96CFD0] rounded-[50%] cursor-pointer outline-none flex justify-center items-center transition-colors duration-200">
+                                                <span>Выбор</span>
 
                                             </div>
-                                            <img class="rounded-[10px] w-[349px]"
+                                            <img class="rounded-[10px]   h-[208px] w-[349px]"
                                                  src="./../../assets/img/Simply-Recipes.jpg" alt="">
                                         </label>
-                                        <label class="flex items-center gap-2 cursor-pointer relative ">
+                                        <label class="flex items-center gap-1 cursor-pointer relative ">
                                             <div class="flex gap-4  top-2 absolute left-2  z-10">
-                                                <input type="radio" name="option" class="custom-radio">
-                                                <span >Выбор</span>
+                                                <input type="radio" name="option"
+                                                       class=" custom-radio w-[24px] h-[24px] appearance-none border-2 border-solid border-[#96CFD0] rounded-[50%] cursor-pointer outline-none flex justify-center items-center transition-colors duration-200">
+                                                <span>Выбор</span>
 
                                             </div>
-                                            <img class="rounded-[10px]  w-[349px] "
+                                            <img class="rounded-[10px]   h-[208px] w-[349px] "
                                                  src="./../../assets/img/Simply-Recipes.jpg" alt="">
                                         </label>
                                     </div>
                                 </div>
 
-                                <div class="tabcontent swiper-slide h-fit!" data-tab="2">
-                                    <div class="description">
-                                        Контент второй вкладки..
-                                    </div>
-                                </div>
-                                <div class="tabcontent swiper-slide h-fit!" data-tab="3">
-                                    <div class="description">
-                                        Контент третьей вкладки..
-                                    </div>
-                                </div>
                             </div>
 
                             <div class="absolute z-10 top-0 right-0 h-full flex flex-col justify-between">
-                                <div class="swiper-button-prev w-[45px] flex justify-center items-center aspect-square cursor-pointer p-[10px] rounded-full border-2 border-(--black)">
+                                <div class="swiper-button-prev w-[36px] h-[36px] flex justify-center items-center aspect-square cursor-pointer p-[10px] rounded-full border-2 border-(--black)">
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <path d="M7.81718 2.8335L7.81718 12.8335" stroke="#1B1B26"
@@ -255,7 +306,7 @@
                                               stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                 </div>
-                                <div class="swiper-button-next w-[45px] flex justify-center items-center aspect-square cursor-pointer p-[10px] rounded-full border-2 border-(--black)">
+                                <div class="swiper-button-next w-[36px] h-[36px] flex justify-center items-center aspect-square cursor-pointer p-[10px] rounded-full border-2 border-(--black)">
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <path d="M8.18282 13.1665L8.18282 3.1665" stroke="#1B1B26"
@@ -267,6 +318,9 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div data-tab="3" class="tabcontent  w-full flex p-[10px] transition duration-300">
+                        пусто
                     </div>
 
                     <div class="h-fit!">
@@ -284,19 +338,21 @@
                             </span>
 
                             </button>
-                            <button class="submit-btn primary small-button  px-[22px] w-max py-[10.25px] bg-(--green) rounded-[40px] font-[HeliosExt] font-bold text-[13px]  text-white hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#80D3D5] disabled:text-white">
-                                <span class="flex items-center justify-center gap-2">
-                                    заказать и вернуться в меню
-                                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M13.6665 7.81706L3.6665 7.81706" stroke="currentColor" stroke-width="2"
-                                              stroke-linecap="round"
-                                              stroke-linejoin="round"/>
-                                        <path d="M9.6333 3.80083L13.6666 7.81683L9.6333 11.8335" stroke="currentColor"
-                                              stroke-width="2"
-                                              stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </span>
+                            <button class="relative submit-btn primary small-button  px-[22px] w-max py-[10.25px] bg-(--green) rounded-[40px] font-[HeliosExt] font-bold text-[13px]  text-white hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#80D3D5] disabled:text-white">
+                                <div class="flex items-center justify-center ">
+                                    <div  class="flex items-center justify-center gap-2 btn-text">
+                                        заказать и вернуться в меню
+                                        <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13.6665 7.81706L3.6665 7.81706" stroke="currentColor" stroke-width="2"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"/>
+                                            <path d="M9.6333 3.80083L13.6666 7.81683L9.6333 11.8335" stroke="currentColor"
+                                                  stroke-width="2"
+                                                  stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
                             </button>
                         </div>
                     </div>
@@ -318,7 +374,6 @@
                 disabledClass: 'border-[#BEBEC2] **:stroke-[#BEBEC2]'
             },
         });
-        console.log(swiper)
         const tabsContainer = document.querySelector('.tabs-container');
         const tabContents = document.querySelectorAll('.tabcontent');
         const submitBtn = document.querySelector('.submit-btn')
@@ -368,8 +423,10 @@
         });
 
         const submitButton = async (event) => {
-            submitBtn.innerHTML = `
-                <div class="flex justify-center">
+            const item = submitBtn.querySelector('.btn-text')
+            item.classList.add('invisible')
+            submitBtn.querySelector("div").innerHTML += `
+                <div class="flex justify-center absolute">
                     <svg class="animate-spin  " viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10.0002 1.66683C8.35198 1.66683 6.74082 2.15557 5.37041 3.07125C4 3.98693 2.9319 5.28842 2.30117 6.81113C1.67044 8.33385 1.50541 10.0094 1.82695 11.6259C2.14849 13.2424 2.94217 14.7273 4.1076 15.8927C5.27304 17.0582 6.7579 17.8518 8.37441 18.1734C9.99092 18.4949 11.6665 18.3299 13.1892 17.6992C14.7119 17.0684 16.0134 16.0003 16.9291 14.6299C17.8448 13.2595 18.3335 11.6483 18.3335 10.0002" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
