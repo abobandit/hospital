@@ -135,12 +135,8 @@
                 </div>
             </div>
             <div data-f-item class="suggest">
-                <div class="relative">
-                    <textarea
-                            placeholder="Ваш комментарий"
-                            data-f-field
-                            class="
-                        px-[24px]
+                <div class="relative textarea">
+                    <div class="relative px-[24px]
                         py-4
                         w-full
                         min-h-[128px]
@@ -149,17 +145,43 @@
                         leading-none
                         border-[1.5px]
                         rounded-2xl
-                        bg-white
-                "></textarea>
-                    <button data-f-clear class="absolute top-[50%] right-[14px] transform-[translateY(-50%)]">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6 6L18.7742 18.7742" stroke="#D6D6D6" stroke-width="2" stroke-linecap="round"
-                                  stroke-linejoin="round"/>
-                            <path d="M6 18.7744L18.7742 6.00022" stroke="#D6D6D6" stroke-width="2"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"/>
-                        </svg>
-                    </button>
+                        bg-white"
+                    >
+                        <button data-f-clear class="absolute top-[22px] right-[11px] transform-[translateY(-50%)] z-10">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 6L18.7742 18.7742" stroke="#D6D6D6" stroke-width="2" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                                <path d="M6 18.7744L18.7742 6.00022" stroke="#D6D6D6" stroke-width="2"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div
+                                data-f-field
+                                contenteditable="true"
+                                class="editable
+                                min-h-[128px]
+                                w-full
+                                text-[17px]
+                                text-(--black)
+                                leading-none
+                                 text-sm focus:outline-none"
+                                role="textbox"
+                                aria-multiline="true"
+                                data-has-content="false"
+                        >
+                           <p class="text-(--grey)">Ваш комментарий</p>
+                        </div>
+
+                        <div class="absolute bottom-1 right-1 text-gray-300">
+                            <!-- Decorative corner lines, replace with SVG or icon if needed -->
+                            <svg width="16" height="16" viewBox="0 0 16 16">
+                                <path d="M0 16 L16 0" stroke="#ccc" stroke-width="1" />
+                            </svg>
+                        </div>
+                    </div>
+
+
                 </div>
                 <div class="pl-[24px] mt-2 text-base text-(--error-dark)" data-f-error>
                     Uh oh! There was an error!
@@ -209,6 +231,39 @@
     <script>
         const fItems = document.querySelectorAll('[data-f-item]')
         const submitBtn = document.querySelector('.submit-btn')
+        const editable = document.querySelector('.editable');
+        const clearBtn = document.querySelector('.textarea [data-f-clear]');
+        const clearContent = () => {
+            editable.innerHTML = '';
+            editable.setAttribute('data-has-content', false);
+            clearBtn.style.opacity = 0;
+            clearBtn.style.pointerEvents = 'none'
+        }
+        editable.addEventListener('focus', () => {
+            const p = editable.querySelector('p')
+            if (p)
+                clearContent()
+        })
+
+        editable.addEventListener('blur', () => {
+            if (editable.innerHTML == '<br>' || editable.innerHTML == '')
+            editable.innerHTML = `
+                <p class="text-(--grey)">Ваш комментарий</p>
+            `
+        })
+        editable.addEventListener('input', () => {
+            const hasText = editable.textContent.trim().length > 0;
+            editable.setAttribute('data-has-content', `${hasText}`);
+
+            if (hasText) {
+                clearBtn.style.opacity = 100;
+                clearBtn.style.pointerEvents = 'all'
+            } else {
+                clearBtn.style.opacity = 0;
+                clearBtn.style.pointerEvents = 'none'
+            }
+        });
+
         const submitButton =  async  (event) => {
             submitBtn.innerHTML = `
                 <div class="flex justify-center">
