@@ -134,6 +134,47 @@
                     Не обязательно для заполнения
                 </div>
             </div>
+            <div data-f-item class="suggest">
+                <div class="relative">
+                    <textarea
+                            placeholder="Ваш комментарий"
+                            data-f-field
+                            class="
+                        px-[24px]
+                        py-4
+                        w-full
+                        min-h-[128px]
+                        text-[17px]
+                        text-(--black)
+                        leading-none
+                        border-[1.5px]
+                        rounded-2xl
+                        bg-white
+                "></textarea>
+                    <button data-f-clear class="absolute top-[50%] right-[14px] transform-[translateY(-50%)]">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 6L18.7742 18.7742" stroke="#D6D6D6" stroke-width="2" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                            <path d="M6 18.7744L18.7742 6.00022" stroke="#D6D6D6" stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="pl-[24px] mt-2 text-base text-(--error-dark)" data-f-error>
+                    Uh oh! There was an error!
+                </div>
+                <div
+                        data-f-success
+                        class="
+                        pl-[24px]
+                        mt-2
+                        text-base
+                        text-(--green)"
+                >
+                    Success message!
+                </div>
+            </div>
             <div class="flex gap-[10px]">
                 <button title="Отправить" class="submit-btn primary-small-button px-6 h-[40px] flex justify-center items-center bg-(--green) rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-white hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#80D3D5] disabled:text-white">
                     <span class="flex justify-center gap-[4px] items-center">
@@ -165,6 +206,26 @@
         </div>
     </div>
     <script defer src="./../../components/inputs/index.js"></script>
+    <script>
+        const fItems = document.querySelectorAll('[data-f-item]')
+        const submitBtn = document.querySelector('.submit-btn')
+        const submitButton =  async  (event) => {
+            submitBtn.innerHTML = `
+                <div class="flex justify-center">
+                    <svg class="animate-spin  " viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.0002 1.66683C8.35198 1.66683 6.74082 2.15557 5.37041 3.07125C4 3.98693 2.9319 5.28842 2.30117 6.81113C1.67044 8.33385 1.50541 10.0094 1.82695 11.6259C2.14849 13.2424 2.94217 14.7273 4.1076 15.8927C5.27304 17.0582 6.7579 17.8518 8.37441 18.1734C9.99092 18.4949 11.6665 18.3299 13.1892 17.6992C14.7119 17.0684 16.0134 16.0003 16.9291 14.6299C17.8448 13.2595 18.3335 11.6483 18.3335 10.0002" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+
+            `;
+            setTimeout(() =>{
+                fItems.forEach(item =>{
+                    item.classList.add('success' )
+                })
+            }  ,1500)
+        }
+        submitBtn.addEventListener('click',async () => await submitButton(event))
+    </script>
 </main>
 </body>
 </html>
