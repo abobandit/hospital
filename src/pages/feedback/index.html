@@ -143,12 +143,14 @@
                         text-[17px]
                         text-(--black)
                         leading-none
+                        resize overflow-auto
                         border-[1.5px]
                         rounded-2xl
                         bg-white"
                     >
                         <button data-f-clear class="absolute top-[22px] right-[11px] transform-[translateY(-50%)] z-10">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6 6L18.7742 18.7742" stroke="#D6D6D6" stroke-width="2" stroke-linecap="round"
                                       stroke-linejoin="round"/>
                                 <path d="M6 18.7744L18.7742 6.00022" stroke="#D6D6D6" stroke-width="2"
@@ -160,7 +162,8 @@
                                 data-f-field
                                 contenteditable="true"
                                 class="editable
-                                min-h-[128px]
+
+                                break-words
                                 w-full
                                 text-[17px]
                                 text-(--black)
@@ -170,14 +173,7 @@
                                 aria-multiline="true"
                                 data-has-content="false"
                         >
-                           <p class="text-(--grey)">Ваш комментарий</p>
-                        </div>
-
-                        <div class="absolute bottom-1 right-1 text-gray-300">
-                            <!-- Decorative corner lines, replace with SVG or icon if needed -->
-                            <svg width="16" height="16" viewBox="0 0 16 16">
-                                <path d="M0 16 L16 0" stroke="#ccc" stroke-width="1" />
-                            </svg>
+                            <p class="text-(--grey)">Ваш комментарий</p>
                         </div>
                     </div>
 
@@ -198,7 +194,8 @@
                 </div>
             </div>
             <div class="flex gap-[10px]">
-                <button title="Отправить" class="submit-btn primary-small-button px-6 h-[40px] flex justify-center items-center bg-(--green) rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-white hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#80D3D5] disabled:text-white">
+                <button title="Отправить"
+                        class="submit-btn primary-small-button px-6 h-[40px] flex justify-center items-center bg-(--green) rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-white hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#80D3D5] disabled:text-white">
                     <span class="flex justify-center gap-[4px] items-center">
                         <span>
                             Отправить
@@ -206,7 +203,8 @@
                         <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.6665 7.81706L3.6665 7.81706" stroke="currentColor" stroke-width="2"
                                   stroke-linecap="round" stroke-linejoin="round"></path>
-                            <path d="M9.6333 3.80083L13.6666 7.81683L9.6333 11.8335" stroke="currentColor" stroke-width="2"
+                            <path d="M9.6333 3.80083L13.6666 7.81683L9.6333 11.8335" stroke="currentColor"
+                                  stroke-width="2"
                                   stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
                     </span>
@@ -219,8 +217,10 @@
                             отменить
                         </span>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6 6L18.7742 18.7742" stroke="#00A7AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M6 18.7744L18.7742 6.00022" stroke="#00A7AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6 6L18.7742 18.7742" stroke="#00A7AA" stroke-width="2" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                            <path d="M6 18.7744L18.7742 6.00022" stroke="#00A7AA" stroke-width="2"
+                                  stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </span>
                 </a>
@@ -232,7 +232,14 @@
         const fItems = document.querySelectorAll('[data-f-item]')
         const submitBtn = document.querySelector('.submit-btn')
         const editable = document.querySelector('.editable');
-        const clearBtn = document.querySelector('.textarea [data-f-clear]');
+        const editableWrapper = document.querySelector('.textarea');
+        const clearBtn = editableWrapper.querySelector('[data-f-clear]');
+        const editableBlur = () => {
+            if (editable.innerHTML == '<br>' || editable.innerHTML === ''.trim())
+                editable.innerHTML = `
+                <p class="text-(--grey)">Ваш комментарий</p>
+            `
+        }
         const clearContent = () => {
             editable.innerHTML = '';
             editable.setAttribute('data-has-content', false);
@@ -245,16 +252,13 @@
                 clearContent()
         })
 
-        editable.addEventListener('blur', () => {
-            if (editable.innerHTML == '<br>' || editable.innerHTML == '')
-            editable.innerHTML = `
-                <p class="text-(--grey)">Ваш комментарий</p>
-            `
-        })
+        editable.addEventListener('blur', () => editableBlur())
         editable.addEventListener('input', () => {
             const hasText = editable.textContent.trim().length > 0;
             editable.setAttribute('data-has-content', `${hasText}`);
 
+            editableWrapper.classList.remove('success')
+            editableWrapper.classList.remove('error')
             if (hasText) {
                 clearBtn.style.opacity = 100;
                 clearBtn.style.pointerEvents = 'all'
@@ -263,8 +267,13 @@
                 clearBtn.style.pointerEvents = 'none'
             }
         });
-
-        const submitButton =  async  (event) => {
+        clearBtn.addEventListener('click', () => {
+            clearContent()
+            editableBlur()
+            editableWrapper.classList.remove('success')
+            editableWrapper.classList.remove('error')
+        })
+        const submitButton = async (event) => {
             submitBtn.innerHTML = `
                 <div class="flex justify-center">
                     <svg class="animate-spin  " viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -273,13 +282,13 @@
                 </div>
 
             `;
-            setTimeout(() =>{
-                fItems.forEach(item =>{
-                    item.classList.add('success' )
+            setTimeout(() => {
+                fItems.forEach(item => {
+                    item.classList.add('success')
                 })
-            }  ,1500)
+            }, 1500)
         }
-        submitBtn.addEventListener('click',async () => await submitButton(event))
+        submitBtn.addEventListener('click', async () => await submitButton(event))
     </script>
 </main>
 </body>

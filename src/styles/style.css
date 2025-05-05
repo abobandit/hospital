@@ -10,6 +10,9 @@
     --light-grey: #F0F5F6;
     --black: #1B1B26;
 }
+*:focus-visible{
+    outline: none;
+}
 body{
     font-family: sans-serif;
     font-size: 18px;
@@ -26,6 +29,12 @@ button:disabled{
 
 svg{
     height: 1.2em;
+}
+.textarea{
+    &:focus,
+    &:focus-visible {
+         outline: none
+     }
 }
 input {
     &:focus,
