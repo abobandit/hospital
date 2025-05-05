@@ -72,18 +72,18 @@
                 <div class="wrapper relative after:content-[''] after:absolute after:bottom-[6px] after:left-0 after:w-full after:h-[3px] after:bg-[#ddd] after:transition-colors after:duration-300  after:ease-initial after:transition-transform">
                     <div class="tabs-container w-[70%] h-[50px] font-[HeliosExt] font-normal flex justify-start font-[HeliosExt] ">
                         <div class="tab rounded-t-[16px] relative h-fit pt-[8.5px] px-[21px] pb-[10px] text-[17px] cursor-pointer ">
-                        <span class="tab-inner flex items-center justify-center gap-[7px]">Основное
-                            <svg width="16"
-                                 height="16"
-                                 viewBox="0 0 16 16"
-                                 fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <rect width="16" height="16" rx="8" fill="#00A7AA"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                      d="M11.8325 5.17568C11.9398 5.2882 12 5.44079 12 5.5999C12 5.759 11.9398 5.91159 11.8325 6.02412L7.25703 10.8243C7.14977 10.9368 7.00433 11 6.85267 11C6.70101 11 6.55556 10.9368 6.44831 10.8243L4.16055 8.42422C4.05637 8.31105 3.99872 8.15948 4.00002 8.00216C4.00132 7.84483 4.06147 7.69434 4.16752 7.58309C4.27356 7.47184 4.41701 7.40874 4.56697 7.40737C4.71693 7.406 4.8614 7.46648 4.96927 7.57578L6.85267 9.55167L11.0238 5.17568C11.1311 5.06319 11.2765 5 11.4282 5C11.5798 5 11.7253 5.06319 11.8325 5.17568Z"
-                                      fill="#EFFAFB"/>
-                            </svg>
-                    </span>
+                            <span class="tab-inner flex items-center justify-center gap-[7px]">Основное
+                                <svg width="16"
+                                     height="16"
+                                     viewBox="0 0 16 16"
+                                     fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="16" height="16" rx="8" fill="#00A7AA"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M11.8325 5.17568C11.9398 5.2882 12 5.44079 12 5.5999C12 5.759 11.9398 5.91159 11.8325 6.02412L7.25703 10.8243C7.14977 10.9368 7.00433 11 6.85267 11C6.70101 11 6.55556 10.9368 6.44831 10.8243L4.16055 8.42422C4.05637 8.31105 3.99872 8.15948 4.00002 8.00216C4.00132 7.84483 4.06147 7.69434 4.16752 7.58309C4.27356 7.47184 4.41701 7.40874 4.56697 7.40737C4.71693 7.406 4.8614 7.46648 4.96927 7.57578L6.85267 9.55167L11.0238 5.17568C11.1311 5.06319 11.2765 5 11.4282 5C11.5798 5 11.7253 5.06319 11.8325 5.17568Z"
+                                          fill="#EFFAFB"/>
+                                </svg>
+                            </span>
                         </div>
                         <div class="tab rounded-t-[16px] relative h-fit pt-[8.5px] px-[21px] pb-[10px] text-[17px] cursor-pointer ">
                         <span class="tab-inner flex items-center justify-center gap-[7px]">Напиток
@@ -343,6 +343,7 @@
             },
         });
         const tabsContainer = document.querySelector('.tabs-container');
+        const tabsWrapper = document.querySelector('.wrapper-tabcontent');
         const tabContents = document.querySelectorAll('.tabcontent');
         const submitBtn = document.querySelector('.submit-btn')
         // SVG для активного и неактивного таба
@@ -364,9 +365,11 @@
         // Функция для обновления иконок
         function updateTabIcons() {
             document.querySelectorAll('.tab').forEach((tab, index) => {
+                const tabBlock = document.querySelector(`[data-tab='${index+1}']`)
+                const checkedInputs = tabBlock.querySelectorAll('input:checked')
                 const span = tab.querySelector('.tab-inner');
                 const text = span.textContent.trim(); // сохраняем текст без SVG
-                span.innerHTML = `${text} ${tab.classList.contains('active') ? activeSVG : inactiveSVG}`;
+                span.innerHTML = `${text} ${tab.classList.contains('active') || !!checkedInputs.length ? activeSVG : inactiveSVG}`;
             });
         }
 
