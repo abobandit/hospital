@@ -45,7 +45,9 @@
     [data-f-field] {
         border-color: var(--green);
     }
-
+    .textarea-inner{
+        border-color: var(--green);
+    }
     [data-f-field]:focus {
         border-color: var(--green);
     }
