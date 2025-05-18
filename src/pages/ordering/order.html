@@ -40,14 +40,10 @@
     </style>
 </head>
 <body class="h-dvh flex flex-col">
-<header class="relative flex p-[17.5px] justify-center w-full h-[90px] bg-white border-b border-[#E5E5E5]">
-    <div class="text-center">
-        <h1 class="text-[35px] leading-[1.05] text-(--green) font-bold font-[HeliosExt]">НАКФФ</h1>
-        <h3 class="text-[20px] leading-[1.05] text-(--green) font-semibold font-[Mulish]">Медицинская клиника </h3>
-    </div>
+
     <a href="/"
        title="на главную"
-       class="absolute left-[17.5px] top-[50%] transform-[translateY(-50%)] secondary-small-button w-[140px] h-[40px] flex justify-center bg-white rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-(--green) border-2 border-(--green) hover:bg-[#E2F5F6] hover:text-(--green) transition-all ease-linear **:transition-all **:ease-linear">
+       class="absolute z-1 left-[17.5px] top-[5%] transform-[translateY(-50%)] secondary-small-button w-[140px] h-[40px] flex justify-center bg-white rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-(--green) border-2 border-(--green) hover:bg-[#E2F5F6] hover:text-(--green) transition-all ease-linear **:transition-all **:ease-linear">
         <span class="flex justify-center gap-[4px] items-center">
             <span>
                 на главную
@@ -58,16 +54,15 @@
             </svg>
         </span>
     </a>
-</header>
-<main class="relative w-full h-full bg-[#F0F5F6E5] overflow-auto pt-16 pb-10 px-[140px]">
+<main class="relative w-full h-full bg-[#F0F5F6E5] overflow-auto pt-6 pb-10 px-[140px]">
     <img class="absolute w-full h-full object-cover inset-0 -z-1" src="../../assets/img/main-banner.png" alt="">
-    <div class="flex items-center justify-center gap-[9px] mb-[44px]">
+    <div class="flex items-center justify-center gap-[9px] mb-[14px]">
         <h2 class="text-center text-[26px] font-[HeliosExt] font-bold">
             Заказ завтрака на завтра
         </h2>
     </div>
     <div class="content ">
-        <div class="container mx-auto max-w-[822px]">
+        <div class="container mx-auto max-w-[822px] min-w-fit">
             <div class="info  bg-white p-[23px] rounded-[20px] outline-3 outline-[#E5E5E5]">
                 <div class="wrapper relative after:content-[''] after:absolute after:bottom-[6px] after:left-0 after:w-full after:h-[3px] after:bg-[#ddd] after:transition-colors after:duration-300  after:ease-initial after:transition-transform">
                     <div class="tabs-container w-[70%] h-[50px] font-[HeliosExt] font-normal flex justify-start font-[HeliosExt] ">
@@ -101,11 +96,24 @@
                             </svg>
                         </span>
                         </div>
+<!--                        <div class="z-2 p-[5px] bg-white  transform-[translateY(35%)]">-->
+<!--                            <a href="/" title="на главную"-->
+<!--                               class="secondary-small-button w-max px-[18px] py-[9px] flex justify-center bg-white rounded-[40px] font-[HeliosExt] font-medium text-[13px]  text-(&#45;&#45;green) border-2 border-(&#45;&#45;green) hover:bg-[#E2F5F6] hover:text-(&#45;&#45;green) transition-all ease-linear **:transition-all **:ease-linear">-->
+<!--                            <span class="flex justify-center gap-[4px] items-center">-->
+<!--                                <span class="sm:hidden lg:block">-->
+<!--                                    на главную-->
+<!--                                </span>-->
+<!--                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--                                    <path d="M5.08993 12.8491V10.8106C5.08993 10.2902 5.51486 9.86837 6.03904 9.86837H7.95515C8.20687 9.86837 8.44828 9.96764 8.62627 10.1443C8.80427 10.321 8.90426 10.5607 8.90426 10.8106V12.8491C8.90267 13.0654 8.98812 13.2734 9.14166 13.4269C9.2952 13.5805 9.50411 13.6668 9.72204 13.6668H11.0293C11.6398 13.6684 12.2259 13.4287 12.6582 13.0007C13.0905 12.5727 13.3334 11.9915 13.3334 11.3854V5.57807C13.3334 5.08847 13.1148 4.62406 12.7365 4.30994L8.28943 0.784075C7.51585 0.165871 6.40749 0.185831 5.65701 0.831482L1.31142 4.30994C0.915242 4.6148 0.67845 5.08059 0.666748 5.57807V11.3795C0.666748 12.6427 1.69834 13.6668 2.97086 13.6668H4.24827C4.7009 13.6668 5.06875 13.3043 5.07203 12.855L5.08993 12.8491Z"-->
+<!--                                          fill="#00A7AA"/>-->
+<!--                                </svg>-->
+<!--                            </span>-->
+<!--                            </a></div>-->
                     </div>
                 </div>
                 <div class="wrapper-tabcontent font-[Mulish]">
                     <div data-tab="1" class="tabcontent  w-full flex p-[10px] transition duration-300">
-                        <div class="tabcontent-header text-[18px] mb-[30px]">
+                        <div class="tabcontent-header text-[18px] ">
                             Можно выбрать только одно блюдо
                         </div>
                         <div class="max-h-[355px] mt-6 mb-[24px]">
@@ -181,10 +189,10 @@
                         </div>
                     </div>
                     <div data-tab="2" class="tabcontent  w-full flex p-[10px] transition duration-300">
-                        <div class="tabcontent-header text-[18px] mb-[30px]">
+                        <div class="tabcontent-header text-[18px]">
                             Можно выбрать только одно блюдо
                         </div>
-                        <div class="swiper max-h-[355px] mt-6 mb-[24px]">
+                        <div class="swiper max-h-[655px] mt-6 ">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide h-[208px]">
                                     <label class="checkbox w-fit leading-[1] flex gap-2 items-center select-none relative cursor-pointer">
@@ -215,7 +223,7 @@
                                 <div class="swiper-slide h-[208px]">
                                     <div class="radio-buttons flex gap-[15px]">
                                         <label class="flex items-center gap-1 cursor-pointer relative ">
-                                            <div class="flex gap-4  top-2 absolute left-2  z-10">
+                                            <div class="flex gap-4  top-2 absolute left-2  z-10 bg-white rounded-[16px] px-[15px] py-[6px]">
                                                 <input type="radio" name="option"
                                                        class=" custom-radio w-[24px] h-[24px] appearance-none border-1 border-solid border-[#96CFD0] rounded-[50%] cursor-pointer outline-none flex justify-center items-center transition-colors duration-200">
                                                 <span>Выбор</span>
@@ -225,7 +233,7 @@
                                                  src="./../../assets/img/Simply-Recipes.jpg" alt="">
                                         </label>
                                         <label class="flex items-center gap-1 cursor-pointer relative ">
-                                            <div class="flex gap-4  top-2 absolute left-2  z-10">
+                                            <div class="flex gap-4  top-2 absolute left-2  z-10 bg-white rounded-[16px] px-[15px] py-[6px]">
                                                 <input type="radio" name="option"
                                                        class=" custom-radio w-[24px] h-[24px] appearance-none border-1 border-solid border-[#96CFD0] rounded-[50%] cursor-pointer outline-none flex justify-center items-center transition-colors duration-200">
                                                 <span>Выбор</span>
@@ -240,7 +248,7 @@
                                 <div class="h-[208px] swiper-slide">
                                     <div class="radio-buttons flex gap-[15px]">
                                         <label class="flex items-center gap-1 cursor-pointer relative ">
-                                            <div class="flex gap-4  top-2 absolute left-2  z-10">
+                                            <div class="flex gap-4  top-2 absolute left-2  z-10 bg-white rounded-[16px] px-[15px] py-[6px]">
                                                 <input type="radio" name="option"
                                                        class=" custom-radio w-[24px] h-[24px] appearance-none border-1 border-solid border-[#96CFD0] rounded-[50%] cursor-pointer outline-none flex justify-center items-center transition-colors duration-200">
                                                 <span>Выбор</span>
@@ -250,7 +258,7 @@
                                                  src="./../../assets/img/Simply-Recipes.jpg" alt="">
                                         </label>
                                         <label class="flex items-center gap-1 cursor-pointer relative ">
-                                            <div class="flex gap-4  top-2 absolute left-2  z-10">
+                                            <div class="flex gap-4  top-2 absolute left-2  z-10 bg-white rounded-[16px] px-[15px] py-[6px]">
                                                 <input type="radio" name="option"
                                                        class=" custom-radio w-[24px] h-[24px] appearance-none border-1 border-solid border-[#96CFD0] rounded-[50%] cursor-pointer outline-none flex justify-center items-center transition-colors duration-200">
                                                 <span>Выбор</span>
@@ -294,7 +302,8 @@
 
                     <div class="h-fit!">
                         <div class="flex justify-end gap-[10px]">
-                            <a href="./index.html" class="secondary small-button px-[22px] w-max py-[10.25px] bg-white rounded-[40px] font-[HeliosExt] font-bold text-[13px]  text-(--green) outline-2 outline-(--green) hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#E2F5F6] disabled:text-[#80D3D5]) disabled:outline-0">
+                            <a href="./index.html"
+                               class="secondary small-button px-[22px] w-max py-[10.25px] bg-white rounded-[40px] font-[HeliosExt] font-bold text-[13px]  text-(--green) outline-2 outline-(--green) hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#E2F5F6] disabled:text-[#80D3D5]) disabled:outline-0">
                                 <span class="flex items-center justify-center gap-2">
                                     отменить
                                     <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
@@ -308,14 +317,16 @@
                             </a>
                             <button class="relative submit-btn primary small-button  px-[22px] w-max py-[10.25px] bg-(--green) rounded-[40px] font-[HeliosExt] font-bold text-[13px]  text-white hover:bg-[#E2F5F6] hover:text-(--green) disabled:bg-[#80D3D5] disabled:text-white">
                                 <div class="flex items-center justify-center ">
-                                    <div  class="flex items-center justify-center gap-2 btn-text">
+                                    <div class="flex items-center justify-center gap-2 btn-text">
                                         заказать и вернуться в меню
                                         <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
                                              xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M13.6665 7.81706L3.6665 7.81706" stroke="currentColor" stroke-width="2"
+                                            <path d="M13.6665 7.81706L3.6665 7.81706" stroke="currentColor"
+                                                  stroke-width="2"
                                                   stroke-linecap="round"
                                                   stroke-linejoin="round"/>
-                                            <path d="M9.6333 3.80083L13.6666 7.81683L9.6333 11.8335" stroke="currentColor"
+                                            <path d="M9.6333 3.80083L13.6666 7.81683L9.6333 11.8335"
+                                                  stroke="currentColor"
                                                   stroke-width="2"
                                                   stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
@@ -365,7 +376,7 @@
         // Функция для обновления иконок
         function updateTabIcons() {
             document.querySelectorAll('.tab').forEach((tab, index) => {
-                const tabBlock = document.querySelector(`[data-tab='${index+1}']`)
+                const tabBlock = document.querySelector(`[data-tab='${index + 1}']`)
                 const checkedInputs = tabBlock.querySelectorAll('input:checked')
                 const span = tab.querySelector('.tab-inner');
                 const text = span.textContent.trim(); // сохраняем текст без SVG
