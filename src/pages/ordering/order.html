@@ -353,17 +353,21 @@
     <script src="./../../components/swiper/swiper-bundle.min.js"></script>
 
     <script>
-        const swiper = new Swiper('.swiper', {
-            direction: 'vertical',
-            spaceBetween: 16,
-            slidesPerView: 'auto',
-            slidesPerGroupAuto: true,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-                disabledClass: 'border-[#BEBEC2] **:stroke-[#BEBEC2]'
-            },
+        document.addEventListener('DOMContentLoaded', function () {
+            const swiper = new Swiper('.swiper', {
+                direction: 'vertical',
+                spaceBetween: 16,
+                slidesPerView: 'auto',
+                slidesPerGroupAuto: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                    disabledClass: 'border-[#BEBEC2] **:stroke-[#BEBEC2]'
+                },
+            });
         });
+
+
         const tabsContainer = document.querySelector('.tabs-container');
         const tabsWrapper = document.querySelector('.wrapper-tabcontent');
         const tabContents = document.querySelectorAll('.tabcontent');
